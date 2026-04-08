@@ -1,0 +1,15 @@
+{
+  "project": "chainfix",
+  "description": "AI-powered supply chain data cleaning tool",
+  "defaultModel": "claude-sonnet-4-20250514",
+  "context": [
+    "CLAUDE.md"
+  ],
+  "rules": [
+    "Always read CLAUDE.md before writing any code",
+    "Never hardcode API keys",
+    "Always put new Python files in src/ folder",
+    "Always put input files in data/input/",
+    "Always put output files in data/output/"
+  ]
+}

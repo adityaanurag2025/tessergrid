@@ -1,0 +1,15 @@
+# ChainFix Dependencies
+
+# Core
+pandas==2.2.0
+openpyxl==3.1.2
+python-dotenv==1.0.0
+
+# AI
+anthropic>=0.40.0
+
+# Frontend
+streamlit==1.32.0
+
+# Utilities
+xlrd==2.0.1

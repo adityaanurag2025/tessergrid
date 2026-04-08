@@ -1,0 +1,18 @@
+# Environment — NEVER commit this
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Data files — input/output stay local
+data/input/
+data/output/
+
+# Temp files from cleaner
+*_tmp_unmerged.xlsx

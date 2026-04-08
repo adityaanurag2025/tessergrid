@@ -1,0 +1,501 @@
+order_id,sku,product_name,supplier,supplier_code,warehouse,region,order_date,ship_date,delivery_date,qty_ordered,qty_shipped,unit,unit_price,currency,lead_time_days,status,transport_mode,batch_no,expiry_date,customer_id,remarks
+PO-1001,rm-004,ALUMINIUM SHEET,Supplier A,S-A01,plant 1, East ,01/02/2026,2026-02-02,04/02/26,60,,kg,310.50,inr,five,Delivered,Rail,B051,2028-05-29,CUST-101,same day delivery
+PO-1002,rm-011,Lubricant Oil,Supplier D,S-D04, Kolkata WH ,EAST,32/02/2026,05 Mar 2026,10-03-2026,100,100,LT,136.5, INR ,5,in transit,Air,B119,29/09/2027,CUST-102,duplicate candidate
+PO-1003,RM-009,copper wire,supplier n,S-N14,LUCKNOW WH,north,19/02/26,2026.02.22,03-03-2026,abc,995,kg,745.71,USD,9,NA,TRUCK,B076,2027-11-18,CUST-103,On time
+PO-1004,FG-920,Sensor Kit,Supplier F,S-F06,Hyderabad WH,west,28-01-2026,2026.02.01,04-02-2026,300, 298 ,PcS,2401.0,inr,3,DELIVERED,Truck,B151,21-02-2028,CUST-104,ship date missing
+PO-1005, FG-920 , Sensor Kit ,SUPPLIER O,S-O15, Delhi Warehouse ,WEST,24/01/26,26 Jan 2026,02 Feb 2026,200,180,PcS,, INR ,7,Partially Delivered,TRUCK,NULL,31/03/2027,CUST-105,multiple null-like values
+PO-1006, RM-003 ,Packaging Foam,,S-H08,Kolkata WH,North,2026.03.14,2026-03-15,24/03/2026,40,35,KGS,15.75, INR ,NULL,pending,SEA,B102,2027/02/01,CUST-106,
+PO-1007,RM-010,chemical mix,Supplier K,S-K11,chennai wh, East ,2026/03/06,09/03/26,NA,40, 40 ,Ltr,220.4,inr,4,delieverd,rail,B181,20/11/27,CUST-107,Delayed by weather
+PO-1008,SFG-33,CASING UNIT,supplier N,S-N14,Plant 2,SOUTH,2026.02.05,2026-02-04,2026-02-06,-600,580,PCS,780.0,INR,1,pending,Air,B007,N/A,CUST-108,ship date before order date
+PO-1009,rm-010,CHEMICAL MIX,Supplier L,S-L12,kolkata wh, North ,2026.03.27,29-03-2026,07/04/26,400,390,Ltr,NULL, INR ,9,DELIVERED,Rail,B033,18 Apr 2027,CUST-109,same day delivery
+PO-1010, FG-500 ,PUMP UNIT,Supplier C,S-C03, Ahmedabad WH , West ,2026.03.22,26/03/26,29/03/2026,600,598,pcs,8722.0,inr,five,,truck,B143,07/06/2027,CUST-110,Delayed by weather
+PO-1011,fg-221,FINISHED GEAR,Supplier N,S-N14,Pune WH, West ,23/02/26,2026.02.23,2026.02.26,800, ,PcS,1176.0,INR,,partial shipment,ROAD,B108,27-02-2028,CUST-111,extra spaces
+PO-1012, FG-500 ,PUMP UNIT,supplier a,S-A01,plant 1,NORTH,2026-02-14,15-02-2026,2026-02-25,50,30,pcs,8900.0, INR ,10,in transit,Air,B122,2026-13-07,CUST-112,ship date missing
+PO-1013,RM-001,Steel Coil,SUPPLIER N,S-N14,Vizag WH, West ,14-01-2026,17/01/2026,2026/01/22,1000,990,KGS,abc,INR,-1,delieverd, Road ,B112,18 Mar 2028,CUST-113,negative lead time
+PO-1014,fg-120, Gasket Kit ,Supplier  H,S-H08,hyderabad wh,EAST,02/03/2026,06/03/2026,2026.03.14,500,498,PCS,225.00,INR,8,delivered, Sea ,B031,2028/03/11,CUST-114,manual entry
+PO-1015,RM-003,packaging foam,Supplier-B,S_B02,delhi warehouse,south,2026-03-14,16 Mar 2026,17/03/2026,200,200,KG,NULL,INR,1,partial shipment,Rail,B110,2027.07.22,CUST-115,On time
+PO-1016,RM-002,Plastic Resin,Supplier  F,S-F06,plant 2, East ,18-03-2026,2026.03.23,2026-04-01,300,298,KGS, 91.79 ,INR,9,Delivered, Road ,B189,2027.08.24,CUST-116,On time
+PO-1017,fg-120,GASKET KIT,supplier Q,S-Q17,Vizag WH, North ,26 Mar 2026,30 Mar 2026,06-04-2026,abc,800,PcS,220.5, INR ,7,delivered,sea,B113,17-09-2028,CUST-117,non numeric qty ordered
+PO-1018, SFG-21 ,valve body,Supplier P,S-P16,Vizag Wh,SOUTH,27/02/26,03-03-2026,null,500,500,PCS,455.0,inr,7,in transit, Road ,B012,28/07/27,CUST-118,manual entry
+PO-1019,FG-500,pump unit,supplier R,S-R18,bangalore wh,north,2026.01.31,05/02/2026,15/02/2026,300,300,PcS,abc,inr,10,DELIVERED,TRUCK,B012,2027.07.12,CUST-119,
+PO-1020,sfg-21,VALVE BODY, Supplier G ,S-G07,Kolkata WH,west,14 Jan 2026,15-01-2026,NA,0,0,PcS,445.9,INR,6,In Transit,RAIL,B191,2027/12/10,CUST-120,
+PO-1021,sfg-33,CASING UNIT, Supplier D ,S-D04,Ahmedabad WH, North ,2026/01/19,2026-01-20,30-01-2026,600,580,pcs,780.0, INR ,10,DELIVERED,Rail,B098,12-05-2028,CUST-121,Delayed by weather
+PO-1022,SFG-17,SEMI FINISHED VALVE,SUPPLIER-B,S_B02,plant 1,East,2026.01.28,31/01/26,07/02/26,200,null,PcS,340.75,INR,7,Delivered,Road,B024,2028.06.14,CUST-122,duplicate candidate
+PO-1023, FG-777 ,Control Panel,supplier d,S-D04,plant 1,North,2026.03.02,2026/03/05,2026/03/10,60, 58 ,PcS,15300.0, INR ,5,In Transit,TRUCK,B123,22/10/2027,CUST-123,Delayed by weather
+PO-1024, SFG-33 ,Casing Unit,Supplier N,S-N14,Pune Wh,EAST,2026.02.17,18-02-2026,28/02/26,1500,1500,PcS,819.0, INR ,10,Delivered,Rail,B144,2026-13-07,CUST-124,Delayed by weather
+PO-1025,SFG-21,valve body,Supplier K,S-K11,PUNE WH, North ,24-01-2026,25/01/2026,03-02-2026,600,600,PcS,464.1,INR,9,DELIVERED,Air,b095,17/06/2027,CUST-125,supplier missing
+PO-1026,fg-221,Finished Gear,Supplier F,S-F06,Delhi Warehouse,west,10-03-2026,2026/03/15,18/03/26,500,500,PCS,1200.0,inr,3,In-Transit,road,B075,2027.01.09,CUST-126,currency mismatch?
+PO-1027,FG-500,PUMP UNIT,supplier o,S-O15,Plant 2, West ,2026.03.29,2026-04-02,12 Apr 2026,400,380,PCS,8722.0,inr,10,Pending,Sea,B130,23-12-2026,CUST-127,multiple null-like values
+PO-1028,SFG-21,Valve Body,supplier m,S-M13, Kolkata WH ,EAST,28 Mar 2026,01 Apr 2026,01 Apr 2026,400,400,PCS,477.75,inr,0,Partially delivered,air,B086,2026.12.20,CUST-128,partial shipment
+PO-1029,sfg-33,Casing Unit,Supplier  E,S-E05,Lucknow Wh, West ,20/01/26,21/01/26,23/01/26,100,90,pcs,764.40,INR,2,,AIR,B137,2027-03-23,CUST-129,multiple null-like values
+PO-1030,RM-001,steel coil,supplier N,S-N14,BANGALORE WH,west,2026-03-06,2026.03.08,11-03-2026,600,,KGS,52.5,inr,3,delieverd,Air,B195,31 Dec 2027,CUST-130,On time
+PO-1031,fg-777,Control Panel,SUPPLIER Q,S-Q17,jaipur wh,North,19-02-2026,null,null,600,603,PcS,15750.0,inr,0,NA,air,B012,2026-13-07,CUST-131,duplicate candidate
+PO-1032,FG-120,Gasket Kit,SUPPLIER O,S-O15,Kolkata WH,EAST,24-01-2026,2026-01-27,2026/02/03,500,480,pcs,, INR ,7,Cncld, Sea ,B083,2026/11/15,CUST-132,duplicate candidate
+PO-1033,SFG-88,Actuator Block,SUPPLIER L,S-L12, Ahmedabad WH ,north,15-03-2026,16/03/26,24 Mar 2026,NULL,498,pcs,1029.0, INR ,8,Delivered,SEA,B199,13/06/2027,CUST-133,ship date missing
+PO-1034, FG-333 ,Motor Assembly,SUPPLIER R,S-R18,delhi warehouse,NORTH,09/01/2026,2026/01/11,17 Jan 2026,1500,1495,nos,"5,600.00", INR ,6,DELIVERED,Air,B142,2028.05.01,CUST-134,partial shipment
+PO-1035, RM-003 ,Packaging Foam,SUPPLIER-B,S_B02,Nagpur WH,EAST,25/03/26,26/03/26,2026/04/04,800,795,KGS,16.54,usd,9,delieverd, Sea ,B117,2026/12/14,CUST-135,partial shipment
+PO-1036,fg-777,CONTROL PANEL,Supplier O,NULL,Ahmedabad Wh,east,2026/03/05,,06/03/26,600,595,pcs,15000.0,inr,1,In-Transit,SEA,B138,2026.09.10,CUST-136,same day delivery
+PO-1037, FG-777 ,Control Panel,Supplier  O,S-O15,Delhi Warehouse,south,2026.02.11,15 Feb 2026,20/02/2026,100,98,PCS,15300.0,inr,5,DELIVERED,road,B005,2027.08.31,CUST-137,Delayed by weather
+PO-1038,RM-005,RUBBER SEAL, Supplier Q ,S-Q17, Chennai WH ,EAST,2026.03.26,2026/03/29,2026.04.06,600,600,KGS,78.96,inr,8,NA,RAIL,B124,17/04/2027,CUST-138,
+PO-1039,RM-005,Rubber Seal,supplier d,S-D04,lucknow wh,South,01/02/2026,2026-02-01,11-02-2026,200,190,Kg,75.20,inr,10,delivered,Road,B168,10 Dec 2027,CUST-139,ship date missing
+PO-1040,FG-333,motor assembly, Supplier I ,N/A,chennai wh, North ,2026/02/12,2026-02-13,20/02/2026,NULL,200,NOS,5880.0, INR ,7,delieverd,Road,B132,20/07/2027,CUST-140,duplicate candidate
+PO-1041,sfg-88, Actuator Block , Supplier N ,S-N14, Plant 1 ,West,10-03-2026,2026.03.15,2026.03.18,200,190,PCS,999.6, INR ,3,Delivered,Truck,,2028-02-13,CUST-141,extra spaces
+PO-1042, FG-221 ,finished gear,Supplier F,S-F06, Plant 2 , South ,24/03/26,29/03/2026,08 Apr 2026,800, ,PCS,1176.0,INR,10,Partially delivered,Air,B168,,CUST-142,extra spaces
+PO-1043,fg-333,Motor Assembly,Supplier H,S-H08,Jaipur WH, South ,2026/01/08,2026/01/09,17-01-2026,300,300,NOS,5880.0,INR,8,delivered, Rail ,B057,12/09/2027,CUST-143,On time
+PO-1044,FG-920,Sensor Kit, Supplier G ,S-G07,bangalore wh,EAST,18-02-2026,2026/02/23,04-03-2026,40,20,PcS,2499.0,INR,9,DELIVERED, Sea ,b004,2026-13-07,CUST-144,manual entry
+PO-1045,RM-010,Chemical Mix,Supplier K,S-K11, Chennai WH ,west,14/03/2026,null,,400, ,LTR,215.99,inr,7,NA,Air,NULL,,CUST-145,extra spaces
+PO-1046,FG-221,FINISHED GEAR,SUPPLIER F,NULL,Mumbai WH,north,09/03/26,2026.03.10,2026.03.13,120,115,PCS,1200.0,inr,3,delivered,AIR,B077,2026-13-07,CUST-146,Delayed by weather
+PO-1047,FG-120,Gasket Kit,Supplier C,NA, Hyderabad WH , South ,2026.03.14,15 Mar 2026,24/03/26,600,590,pcs,NULL,INR,9,DELIVERED,truck,B026,2027-12-11,CUST-147,Delayed by weather
+PO-1048, RM-003 ,PACKAGING FOAM,SUPPLIER F,S-F06,kolkata wh, West ,2026/03/13,32/02/2026,25 Mar 2026,-800,800,KGS,15.44,inr,8,Delivered,Rail,B063,28-04-2028,CUST-148,duplicate candidate
+PO-1049,sfg-33,Casing Unit,SUPPLIER G,S-G07,ahmedabad wh, East ,23/01/26,26/01/26,31/01/2026,300,290,pcs,780.0,INR,5,,Sea,B030,27/02/28,CUST-149,extra spaces
+PO-1050,fg-920,Sensor Kit,SUPPLIER C,S-C03,Mumbai_WH, South ,26-03-2026,31/03/26,2026/04/05,100,90,PcS,"2,401.00", USD ,5,partial shipment,TRUCK,B003,10/01/27,CUST-150,extra spaces
+PO-1051,rm-011,Lubricant Oil,SUPPLIER Q,S-Q17,delhi warehouse, South ,12 Feb 2026,16 Feb 2026,22-02-2026,1000,1000,LT,127.4, INR ,6,pending,Road,B152,03/11/2027,CUST-151,manual entry
+PO-1052, FG-221 ,Finished Gear,SUPPLIER E,S-E05,Lucknow WH,West,24/02/2026,2026.02.25,2026.03.04,100,95,PCS,"1,224.00", INR ,7,Delivered,ROAD,B035,18-03-2027,CUST-152,extra spaces
+PO-1053,RM-011,LUBRICANT OIL,SUPPLIER J,S-J10,Vizag WH,NORTH,2026/02/27,01 Mar 2026,06/03/26,50,48,L,136.50,INR,5,delieverd,AIR,B158,22-01-2027,CUST-153,ship date missing
+PO-1054,rm-003,PACKAGING FOAM,Supplier C,S-C03,kolkata wh, East ,30 Mar 2026,2026-13-07,2026-04-08,1500,1500,kg,abc,eur,7,In transit,truck,B137,2027/11/16,CUST-154,same day delivery
+PO-1055,rm-009,Copper Wire,Supplier - B,S_B02,kolkata wh, East ,31/03/26,01 Apr 2026,2026-04-07,50,40,KG,724.4,inr,6,DELIVERED, Truck ,B109,13/09/28,CUST-155,Delayed by weather
+PO-1056,RM-005,Rubber Seal,Supplier H,S-H08,Hyderabad Wh, North ,01 Feb 2026,05/02/26,2026-02-14,300,NULL,KG,78.96,inr,9,in transit,Road,B099,06 Dec 2026,CUST-156,duplicate candidate
+PO-1057,fg-777,control panel,SUPPLIER G,S-G07,PLANT 2,SOUTH,10/03/2026,12 Mar 2026,2026-03-18,50,50,pcs,15000.0, INR ,,delieverd,Rail,B156,2026/11/09,CUST-157,manual entry
+PO-1058,RM-004,Aluminium Sheet,supplier h,S-H08,Plant 1,north,2026.01.06,2026-01-06,09/01/26,40,38,kg,abc,INR,3,,AIR,B083,19-03-2027,CUST-158,manual entry
+PO-1059, RM-011 ,lubricant oil,supplier e,null,Bangalore Wh, West ,2026/01/04,2026.01.05,13/01/26,500,NULL,L,136.50,inr,8,NA,TRUCK,B053,2028/01/05,CUST-159,same day delivery
+PO-1060,RM-004,aluminium sheet,supplier E,S-E05,Mumbai WH,SOUTH,27/02/2026,N/A,2026.03.07,800,800,KGS,304.29,INR,5,delivered, Sea ,B181,2028.08.16,CUST-160,ship date missing
+PO-1061,RM-010,chemical mix, Supplier O ,S-O15, Plant 2 , South ,12-01-2026,NA,15 Jan 2026,40,38,LTR,215.99,inr,1,delieverd,AIR,B091,2027.02.18,CUST-161,
+PO-1062,rm-011,LUBRICANT OIL,Supplier A,S-A01,Plant 2,EAST,2026.01.08,11/01/26,19-01-2026,500,,L,, INR ,8,Delivered,Air,B148,19/08/27,CUST-162,partial shipment
+PO-1063, SFG-33 ,casing unit,Supplier - B,S_B02,Bangalore Wh,south,17 Mar 2026,22 Mar 2026, ,60,40,PcS,819.00, INR ,2,DELIVERED,Sea,B035,28/02/2027,CUST-163,same day delivery
+PO-1064, RM-003 ,packaging foam,supplier k,S-K11,Ahmedabad WH,NORTH,2026-13-07,2026/02/04,07 Feb 2026,NULL,0,Kg,15.44,inr,3,partial shipment, Road ,B097,31/07/2027,CUST-164,Delayed by weather
+PO-1065,FG-920,Sensor Kit,Supplier  R,S-R18, Hyderabad WH , East ,2026/02/08,09/02/2026,10/02/2026,40,38,PCS,2450.0,INR,1,delieverd,Air,B025,04/09/26,CUST-165,duplicate candidate
+PO-1066,fg-221,finished gear,supplier r,S-R18, Nagpur WH ,west,15 Mar 2026,2026/03/16,2026-03-23,NULL,300,PcS,1224.0,INR,7,in transit,TRUCK,B194,22/12/2027,CUST-166,partial shipment
+PO-1067, RM-004 ,ALUMINIUM SHEET,NA,S-D04, Plant 2 ,East,10/03/2026,12-03-2026,18 Mar 2026,210,208,KG,310.5, INR ,6,In-Transit,TRUCK,B102,19/08/2027,CUST-167,On time
+PO-1068,fg-777,Control Panel,Supplier A,S-A01,DELHI WAREHOUSE,South,26-01-2026,,29/01/2026,40,38,PCS,"14,700.00", INR ,3,In Transit,truck,B062,NA,CUST-168,multiple null-like values
+PO-1069,SFG-17,SEMI FINISHED VALVE,Supplier N,S-N14,KOLKATA WH,EAST,2026.02.28,02/03/26,05-03-2026,1000,1000,pcs,340.75,inr,3,In transit, Rail ,B166, ,CUST-169,
+PO-1070,FG-920,SENSOR KIT,supplier p,S-P16,Nagpur WH,East,06/03/2026,08-03-2026,10/03/26,100,100,PcS,2450.0,usd,2,in transit,sea,B058,17/07/2027,CUST-170,currency mismatch?
+PO-1071,rm-009,COPPER WIRE,supplier f,S-F06,Ahmedabad Wh,NORTH,17/01/26,NA,2026.01.27,0,0,KG,745.71,inr,6,DELIVERED,rail,B049,13/08/2026,CUST-171,duplicate candidate
+PO-1072, FG-777 ,control panel,Supplier F,S-F06,Mumbai WH,East,2026/03/25,25-03-2026,31 Mar 2026,210,190,PcS,15000.0,inr,6,Delivered,road,B114,2027.10.21,CUST-172,
+PO-1073,RM-001,STEEL COIL,Supplier A,S-A01,Nagpur WH,North,2026-01-15,null,2026/01/29,1500,1500,kg,52.5,inr,10,DELIVERED, Sea ,B119,17 Sep 2026,CUST-173,partial shipment
+PO-1074,RM-004,ALUMINIUM SHEET, ,S-E05,Plant 1,north,21 Jan 2026,21 Jan 2026,27 Jan 2026,1500,1480,KGS,316.71, INR ,6,in transit,Road,b125,18-11-2026,CUST-174,multiple null-like values
+PO-1075,SFG-17,Semi Finished Valve,Supplier-B,S_B02,Jaipur Wh,south,12-03-2026,2026-03-17,2026/03/23,600,580,PCS,340.75,INR,6,Delivered,road,,2025/08/28,CUST-175,same day delivery
+PO-1076,fg-500,Pump Unit,Supplier E,S-E05, Vizag WH , West ,14/01/26,2026.01.16,2026-01-25,120,120,pcs,9345.0, INR ,9,Pending,rail,B032,28-10-2027,CUST-176,supplier missing
+PO-1077,FG-777,Control Panel,supplier J,S-J10,Vizag Wh,EAST,12-03-2026,2026-03-17,32/02/2026,,120,PcS,15000.0,EUR,3,Partially Delivered,RAIL,B139,26-08-2028,CUST-177,manual entry
+PO-1078,fg-920,sensor kit,SUPPLIER M,S-M13,Chennai WH,east,30 Mar 2026,04-04-2026,04/04/2026,600,598,PcS,2450.0,INR,0,delieverd,Air,,2028/07/25,CUST-178,supplier missing
+PO-1079,FG-777,CONTROL PANEL, Supplier C ,S-C03,Plant 2,SOUTH,23/02/26,2026.02.27,2026-13-07,600,600,PCS,15000.0,usd,8,Partially delivered,rail,B122,30/03/28,CUST-179,currency mismatch?
+PO-1080, RM-010 ,Chemical Mix,supplier n,S-N14,Vizag WH,North,2026.01.27,NULL,2026/02/06,50,NULL,ltr,220.4,inr,6,Delivered,Rail,B059,26-04-2027,CUST-180,multiple null-like values
+PO-1081,sfg-21,Valve Body,SUPPLIER L,S-L12,Bangalore WH,SOUTH,2026/01/16,16-01-2026,16 Jan 2026,600,595,PcS,477.75,inr,-1,delivered,AIR,B048,26/02/27,CUST-181,negative lead time
+PO-1082,RM-011,Lubricant Oil,Supplier N,S-N14,Hyderabad Wh, East ,18/01/2026,2026.01.23,28 Jan 2026,1500,1498,L,130.0,inr,5,DELIVERED,Air,B138,13 Feb 2027,CUST-182,duplicate candidate
+PO-1083,FG-777,CONTROL PANEL,Supplier  E,S-E05,AHMEDABAD WH,south,23-01-2026,27/01/26,05/02/2026,75,65,PCS,15000.0, INR ,9,Delivered, Air ,B133, ,CUST-183,multiple null-like values
+PO-1084,RM-004,aluminium sheet,supplier H,S-H08,Kolkata Wh,East,15 Jan 2026,2026-01-18,28-01-2026,1500,1498,kg,310.5,INR,10,in transit,Air,B162,09-04-2025,CUST-184,partial shipment
+PO-1085, RM-001 ,Steel  Coil,supplier G,S-G07,Jaipur WH,West,2026/01/20,24/01/26,2026.01.25,100,98,kg,52.5,INR,1,Delivered, Road ,B134,2027/09/27,CUST-185,On time
+PO-1086,FG-920,Sensor Kit,SUPPLIER N,S-N14,Lucknow Wh, East ,20/03/26,22 Mar 2026,N/A,600,NULL,pcs,2450.0, INR ,10,DELIVERED,Rail,B089,09 Nov 2027,CUST-186,duplicate candidate
+PO-1087,RM-002,Plastic Resin,Supplier F,S-F06,Nagpur WH,West,26 Feb 2026,2026/02/26,01/03/2026,-300,300,KG,91.79,inr,3,delivered,TRUCK,,2026.11.24,CUST-187,same day delivery
+PO-1088,FG-333,Motor Assembly,Supplier M,S-M13,lucknow wh, West ,01/02/2026,03 Feb 2026,10-02-2026,1000,995,Nos,5880.0,INR,-1,delivered,SEA,B106,05 Aug 2027,CUST-188,negative lead time
+PO-1089,rm-002,Plastic Resin,SUPPLIER P,S-P16,Pune WH,East,05-03-2026,2026.03.09,2026/03/13,1500,1500,KG,91.79,INR,4,delieverd,ROAD,B139,2026.10.12,CUST-189,same day delivery
+PO-1090, SFG-17 ,semi finished valve,Supplier  H,S-H08,Jaipur WH,West,2026/02/18,2026.02.19,2026-02-21,75,73,PcS,347.56, INR ,2,delieverd,sea,B065,2028.03.17,CUST-190,On time
+PO-1091,SFG-21,Valve Body,SUPPLIER O,S-O15,nagpur wh,south,22 Jan 2026,27/01/2026,01-02-2026,800,N/A,pcs,455.0,INR,5,DELIVERED,sea,B155,21/05/2028,CUST-191,multiple null-like values
+PO-1092, RM-009 ,Copper Wire,Supplier A,S-A01,bangalore wh,EAST,2026-13-07,14/02/2026,2026-02-21,210,205,KG,724.4,inr,7,In-Transit,Rail,B164,04-06-2028,CUST-192,currency mismatch?
+PO-1093,fg-120,gasket kit,Supplier H,S-H08,Hyderabad WH,NORTH,24 Feb 2026,2026-13-07,2026-13-07,210,210,pcs,225.0, INR ,3,delieverd,RAIL,B116,2027/06/05,CUST-193,multiple null-like values
+PO-1094,sfg-17,Semi Finished Valve,supplier m,S-M13,Vizag WH,NORTH,2026-01-16,2026-01-21,2026-01-24,600,580,pcs,333.94,INR,3,delivered, Road ,B100,19/06/2028,CUST-194,currency mismatch?
+PO-1095, RM-002 ,PLASTIC RESIN,SUPPLIER-B,S_B02,pune wh,SOUTH,31-03-2026,04/04/26,32/02/2026,75,73,KGS,88.19, INR ,1,delieverd,sea,B186,2027.02.16,CUST-195,On time
+PO-1096,FG-120,Gasket Kit,Supplier  G,null,Jaipur Wh,West,2026-13-07,13/03/26,2026-03-22,300,300,PcS,225.0,INR,9,Partially Delivered,TRUCK,B052,2027-01-05,CUST-196,Delayed by weather
+PO-1097,FG-920,Sensor Kit,Supplier M,S-M13,CHENNAI WH,SOUTH,2026.03.14,09 Mar 2026,17-03-2026,100,95,PcS,2499.0,inr,3,delieverd,TRUCK,B043,2027/03/16,CUST-197,ship date before order date
+PO-1098,sfg-17,Semi Finished Valve,Supplier  R,, Jaipur WH ,South,13/01/26,13-01-2026,20/01/26,500,500,pcs,340.75, INR ,7,delieverd,RAIL,B056,2026/10/06,CUST-198,multiple null-like values
+PO-1099, FG-120 ,gasket kit, Supplier O ,S-O15,PLANT 2, North ,2026.01.29,01-02-2026,2026/02/05,600,NA,pcs,229.5,inr,4,delieverd, Air ,b196,20/12/26,CUST-199,ship date missing
+PO-1100,RM-005,Rubber Seal,Supplier J,S-J10,Bangalore WH,EAST,32/02/2026,2026-13-07,03/04/26,-1000, 998 ,KG,76.7,inr,4,delieverd, Rail ,B187,21-02-2027,CUST-200,duplicate candidate
+PO-1101,FG-333,MOTOR ASSEMBLY,SUPPLIER R,S-R18, Plant 1 ,north,2026.01.06,2026.01.07,15/01/2026,0,0,NOS,"5,600.00", INR ,8,DELIVERED,TRUCK,B161,03/04/27,CUST-201,On time
+PO-1102,FG-920,SENSOR KIT, Supplier R ,S-R18,plant 1,North,24 Jan 2026,26/01/26,2026/01/28,25,5,PCS,2401.0,inr,2,Cncld,Sea,B039,04 Feb 2027,CUST-202,partial shipment
+PO-1103,fg-333,Motor Assembly,Supplier P,S-P16,Plant 1,East,28-02-2026,01/03/26,2026/03/07,600,,Nos,5488.0, INR ,6,Pending,Rail,B028,09 Dec 2027,CUST-203,On time
+PO-1104,FG-333,motor assembly,SUPPLIER G,S-G07,Ahmedabad WH,North,2026/02/02,2026/02/04,14/02/2026,100,NA,NOS,abc,inr,10,pending,Road,B141,06/09/2027,CUST-204,partial shipment
+PO-1105,rm-001,steel coil,Supplier H,S-H08,Jaipur WH,EAST,21-03-2026,26/03/26,03/04/2026,120,120,KG,52.5,INR,8,cancelled,Sea,B023,2026-11-19,CUST-205,partial shipment
+PO-1106,SFG-21,valve body,supplier N,S-N14,LUCKNOW WH,EAST,03 Feb 2026,07 Feb 2026,2026/02/16,500,500,PCS,445.9,inr,9,Partially Delivered,Sea,B050,16/08/26,CUST-206,multiple null-like values
+PO-1107,RM-005,rubber seal,supplier P,S-P16,Delhi Warehouse,WEST,2026/03/10,2026-03-12,19-03-2026,800,790,KGS,76.7,INR,7,DELIVERED,Sea,B017,N/A,CUST-207,On time
+PO-1108,FG-777,CONTROL PANEL,NA,S-J10,plant 2,EAST,2026/01/19,19-01-2026,27/01/2026,75,,PcS,"15,000.00", INR ,8,Partially delivered,RAIL,B023,2027.07.02,CUST-208,On time
+PO-1109,FG-333,Motor Assembly,supplier-b,S_B02,Delhi Warehouse, North ,2026/03/02,07-03-2026,07/03/2026,60,58,NOS,5712.0, INR ,0,In-Transit,RAIL,B092,N/A,CUST-209,ship date missing
+PO-1110, SFG-88 ,Actuator Block,Supplier E,S-E05,jaipur wh,north,2026-02-21,26/02/26,27-02-2026,400,395,PCS,999.6, INR ,1,in transit,Road,B099,01 Nov 2026,CUST-210,manual entry
+PO-1111,RM-001,Steel Coil,Supplier  E,S-E05,Nagpur Wh,South,2026-13-07,2026-03-03,07/03/2026,600,595,KGS,52.5,inr,4,partial shipment,road,B184,2027/08/21,CUST-211,supplier missing
+PO-1112, RM-005 ,rubber seal,Supplier A,S-A01,Mumbai WH,north,2026/01/19,2026/01/24,NULL,800,800,Kg,78.96,INR,7,delivered,Road,B131,07-10-2027,CUST-212,multiple null-like values
+PO-1113,RM-003,PACKAGING FOAM,SUPPLIER R,S-R18,Plant 2,East,2026/03/20,2026/03/20,2026-03-25,25,23,KGS,15.44,INR,5,partial shipment,Sea,B043,27-10-2026,CUST-213,supplier missing
+PO-1114,RM-009,copper wire,Supplier  Q,S-Q17,Vizag Wh,north,13 Feb 2026,2026.02.13,2026-13-07,75,55,KG,745.71,INR,2,in transit,Rail,B188,02 Aug 2027,CUST-214,
+PO-1115,FG-120,Gasket Kit,NULL,,Plant 2,south,28 Mar 2026,2026-04-01,04 Apr 2026,400,390,PcS,225.00,INR,3,Delivered, Rail ,B027,N/A,CUST-215,ship date missing
+PO-1116,sfg-33,Casing Unit,supplier i,S-I09,Delhi Warehouse,NORTH,2026-02-05, ,11-02-2026,600,600,pcs,764.4, INR ,6,Partially Delivered, Rail ,B101,08-02-2027,CUST-216,Delayed by weather
+PO-1117,RM-003,PACKAGING FOAM,SUPPLIER R,S-R18, Chennai WH ,north,19-02-2026,2026/02/24,03-03-2026,60,55,KGS,15.44,inr,7,Partially delivered,TRUCK,B094,28/02/28,CUST-217,currency mismatch?
+PO-1118,rm-002,Plastic Resin,supplier m,S-M13,mumbai_wh,South,2026-03-25,2026.03.30,07-04-2026,1000,990,KG,89.99, INR ,8,Delivered,road,B159,2026-11-19,CUST-218,duplicate candidate
+PO-1119,FG-221,Finished Gear, Supplier F ,S-F06,PLANT 1, East ,12/03/2026,2026-13-07,2026-03-20,200,195,PcS,abc,INR,7,delieverd,TRUCK,B002,2026.09.23,CUST-219,Delayed by weather
+PO-1120,rm-002,Plastic Resin,supplier g,S-G07,Mumbai WH, South ,2026/03/29,2026/04/01,08/04/2026, 100 ,100,KGS,89.99,inr,7,delieverd,Truck,B027,27-11-2026,CUST-220,partial shipment
+PO-1121,SFG-88,Actuator Block, Supplier I ,S-I09, Chennai WH ,EAST,2026-13-07,17/01/2026,2026.01.26,40,40,pcs,980.00,inr,9,delivered,Rail,NULL,07/03/28,CUST-221,ship date missing
+PO-1122, FG-221 ,Finished Gear,supplier g,S-G07,Delhi Warehouse,EAST,2026/02/07,2026.02.08,18/02/26,50,50,PcS,1260.0, INR ,10,partial shipment,Air,B181,2027/10/06,CUST-222,currency mismatch?
+PO-1123,RM-010,Chemical Mix,supplier e,S-E05,Pune Wh,SOUTH,2026/03/11,11/03/26,21/03/2026,1500,NULL,ltr,231.42,INR,10,DELIVERED,RAIL,B175,24/11/2027,CUST-223,Delayed by weather
+PO-1124, FG-920 ,sensor kit,Supplier  E,S-E05,AHMEDABAD WH,east,2026/02/23,2026-13-07,08/03/2026,25,33,PcS,2572.5, INR ,10,In transit,road,B152,2028.07.16,CUST-224,extra spaces
+PO-1125,rm-002,Plastic Resin,supplier k,S-K11,Pune WH,south,2026-02-17,20/02/26,2026/02/28,,95,Kg,89.99,usd,8,DELIVERED,Sea,B122,2027-06-19,CUST-225,supplier missing
+PO-1126, FG-777 ,Control Panel,supplier-b,S_B02,NAGPUR WH, East ,2026.02.20,32/02/2026,2026-02-27,abc,498,PCS,15300.0, INR ,6,,road,B114,17-06-2027,CUST-226,manual entry
+PO-1127,FG-920,SENSOR KIT,supplier O,S-O15,Chennai WH, North ,01/01/26,2026.01.02,NA,300,NA,PCS,2401.0,inr,4,Partially delivered,AIR,B008,2026-11-04,CUST-227,multiple null-like values
+PO-1128,RM-009,copper wire,supplier d,S-D04,Lucknow WH,South,2026-03-11,2026/03/13,2026.03.18,abc,300,KGS,710.2,INR,5,DELIVERED,road,B106,2027-08-28,CUST-228,non numeric qty ordered
+PO-1129,FG-500,PUMP UNIT,Supplier N,S-N14,Bangalore Wh,south,2026-01-14,2026-01-14,2026/01/24,40,abc,PcS,8900.0, INR ,10,pending, Rail ,B052,2027-01-28,CUST-229,On time
+PO-1130,rm-011,LUBRICANT OIL,supplier N,S-N14,Mumbai_WH, East ,2026/01/16,19-01-2026,2026.01.20,75,73,L,130.0,INR,1,DELIVERED,road,b154,03-06-2027,CUST-230,multiple null-like values
+PO-1131,SFG-17,Semi Finished Valve,Supplier M,S-M13,Pune Wh,West,27 Mar 2026,31/03/26,06-04-2026,1500,1495,PCS,333.94,INR,6,in transit,Truck,B026,26-11-2026,CUST-231,multiple null-like values
+PO-1132,RM-009,COPPER WIRE,Supplier P,S-P16,kolkata wh,SOUTH,09 Feb 2026,14 Feb 2026,2026/02/20,1500,,Kg,696.0,inr,6,Delivered,Road,B068,2028.01.07,CUST-232,same day delivery
+PO-1133,fg-221,Finished Gear, Supplier I ,S-I09,Bangalore WH,WEST,17-03-2026,2026-03-17,2026.03.22,600,,pcs,1260.0,INR,5,DELIVERED,AIR,B158,2027/07/21,CUST-233,same day delivery
+PO-1134,FG-920,Sensor Kit,supplier f,S-F06, Bangalore WH ,SOUTH,15 Mar 2026,18/03/2026,21/03/2026,abc,1000,PCS,2499.0,inr,3,delivered,Sea,B119,2026-13-07,CUST-234,manual entry
+PO-1135,RM-002,Plastic Resin,supplier p,S-P16,PLANT 2,NORTH,08 Jan 2026,08/01/2026,2026-01-13,300,280,kg,88.19,eur,5,Cancelled,Truck,B147,2027/12/06,CUST-235,extra spaces
+PO-1136,SFG-21,valve body,SUPPLIER A,S-A01,Nagpur WH,NORTH,26/03/26,2026/03/26,05-04-2026,200,200,PCS,477.75,INR,10,cancelled,ROAD,B003,08/11/27,CUST-236,
+PO-1137,RM-009,copper wire,Supplier O,S-O15, Plant 2 ,south,,2026-13-07,2026-01-07,300,300,KG,724.4,inr,3,NA,road,B123,2026-11-19,CUST-237,ship date before order date
+PO-1138, FG-500 ,PUMP UNIT,SUPPLIER D,S-D04, Chennai WH ,south,25 Jan 2026,27-01-2026,2026/01/31,NULL,,PCS,9345.0,inr,4,delieverd,Air,B008,2026-13-07,CUST-238,ship date missing
+PO-1139,RM-005,RUBBER SEAL,supplier R,S-R18,BANGALORE WH, South ,03/02/2026,04 Feb 2026,32/02/2026,1500,,Kg,75.2,inr,8,delivered, Road ,,15-08-2027,CUST-239,
+PO-1140,RM-003,Packaging Foam,supplier g,S-G07,vizag wh,East,24/01/26,25 Jan 2026,2026-02-02,210,,kg,16.07, INR ,8,Delivered,Air,B197,2027/12/24,CUST-240,currency mismatch?
+PO-1141,fg-120,Gasket Kit, Supplier C ,S-C03, Kolkata WH , East ,2026.01.23,24/01/26,30 Jan 2026,50,NA,PCS,236.25, INR ,6,In Transit,sea,B126,2027-10-14,CUST-241,
+PO-1142,RM-005,RUBBER SEAL,SUPPLIER E,S-E05,Nagpur WH,East,01 Feb 2026,05-02-2026,11/02/26,300,295,kg,76.7,usd,6,DELIVERED,SEA,B066,2028-03-31,CUST-242,currency mismatch?
+PO-1143, FG-120 ,gasket kit,SUPPLIER P,S-P16, Hyderabad WH ,East,30/03/2026,04-04-2026,2026.04.14,0,0,pcs,225.0,INR,10,Delivered, Air ,B124,2028.08.05,CUST-243,ship date missing
+PO-1144,fg-777,Control Panel, Supplier P ,S-P16,Chennai WH,NORTH,09/03/26,09/03/2026,15-03-2026,400,395,PCS,15000.0,INR,6,partial shipment,ROAD,B179,18/10/2025,CUST-244,manual entry
+PO-1145,FG-500,PUMP UNIT,Supplier  J,S-J10,Chennai WH,South,13-03-2026,13/03/26,2026.03.13,500, 500 ,PcS,8900.0,INR,0,Delivered,rail,B059,10-01-2027,CUST-245,multiple null-like values
+PO-1146, SFG-88 ,actuator block,supplier K,S-K11, Vizag WH ,SOUTH,16-01-2026,2026-13-07,2026-01-24,800,780,PCS,980.0,INR,7,DELIVERED,road,B093, ,CUST-246,partial shipment
+PO-1147,FG-221,FINISHED GEAR,SUPPLIER M,S-M13,Nagpur Wh,EAST,2026.02.10,12/02/26,2026-13-07,210,205,PcS,1200.0,eur,0,,Sea,B167,2027.09.29,CUST-247,
+PO-1148, SFG-21 ,VALVE BODY,supplier a,S-A01, Ahmedabad WH ,east,31-01-2026, ,2026.02.14,200,200,PcS,477.75, INR ,9,delivered, Truck ,B084,2028.01.23,CUST-248,currency mismatch?
+PO-1149,FG-777,Control Panel,SUPPLIER D,S-D04, Plant 1 ,South,2026/02/28,03/03/26,2026-13-07,100,NULL,PCS,15000.0, INR ,0,In Transit,RAIL,B040,2026.12.28,CUST-249,currency mismatch?
+PO-1150,FG-333,Motor Assembly,supplier e,S-E05,Vizag Wh,East,2026.01.12,2026-01-16,26/01/2026,800,798,NOS,5488.0, INR ,10,in transit,TRUCK,B147,2026-13-07,CUST-250,manual entry
+PO-1151,FG-777,CONTROL PANEL,supplier k,null,Kolkata Wh,east,12/01/26,2026/01/12,13-01-2026,NULL, ,PCS,14700.0,inr,1,DELIVERED,Air,B007,09/09/26,CUST-251,Delayed by weather
+PO-1152,FG-777,Control Panel, Supplier G ,S-G07,Plant 2,SOUTH,2026-13-07,2026/02/21,23/02/26,200,195,pcs,15000.0,inr,2,Partially delivered,SEA,B168,2025/06/21,CUST-252,
+PO-1153, SFG-33 ,CASING UNIT,supplier A,S-A01,PLANT 1, South ,24/03/26,2026-03-24,02-04-2026,abc,1500,PcS,819.0,INR,9,Delivered,TRUCK,B138,30-10-2026,CUST-253,duplicate candidate
+PO-1154,RM-010,Chemical Mix,Supplier  A,S-A01, Chennai WH ,West,15 Jan 2026,17/01/26,26-01-2026,1500,1500,LTR,224.81, INR ,9,delivered,TRUCK,B033,16-04-2027,CUST-254,ship date missing
+PO-1155,RM-011,lubricant oil,SUPPLIER N,S-N14,Mumbai WH, South ,2026-01-26,27-01-2026,2026-02-01,300,N/A,L,, INR ,5,partial shipment,Air,B028,NULL,CUST-255,currency mismatch?
+PO-1156,rm-011,LUBRICANT OIL,SUPPLIER A,S-A01, Ahmedabad WH ,west,01/03/26,null,13 Mar 2026,0,0,LT,130.00,inr,9,Delivered,RAIL,B183,,CUST-256,ship date missing
+PO-1157, FG-920 ,Sensor Kit,Supplier-B,S_B02,Kolkata WH,east,26/01/2026,27/01/26,06/02/2026,120,abc,PcS,abc,inr,10,DELIVERED,rail,B077,07/10/27,CUST-257,Delayed by weather
+PO-1158,RM-011,Lubricant Oil,supplier i,S-I09,plant 1,south,13-02-2026,17-02-2026,2026-02-20,-100,100,L,136.50,INR,five,In Transit,sea,B054,27/06/2027,CUST-258,currency mismatch?
+PO-1159, RM-009 , Copper Wire ,SUPPLIER Q,S-Q17,KOLKATA WH,EAST,05/03/2026,2026.03.09,16-03-2026,100,100,Kg,696.0,inr,7,Delivered, Air ,NULL,2027/04/07,CUST-259,ship date missing
+PO-1160,RM-003,PACKAGING FOAM,Supplier I,S-I09, Chennai WH , North ,16/01/26,2026.01.16,21/01/26,40,35,KGS,16.54, INR ,5,In transit, Air ,B181,29-03-2028,CUST-260,manual entry
+PO-1161,fg-920,SENSOR KIT,supplier A,S-A01,pune wh, South ,32/02/2026,2026/03/16,2026/03/20, 25 ,23,PCS,, INR ,4,DELIVERED,Sea,B151,N/A,CUST-261,On time
+PO-1162,RM-002,Plastic Resin,Supplier L,S-L12, Jaipur WH ,North,2026.01.22,2026.01.24,2026.01.30,,600,kg,88.19, INR ,6,delivered, Sea ,B111,08/06/2028,CUST-262,supplier missing
+PO-1163, RM-009 ,COPPER WIRE,Supplier D,S-D04,Kolkata WH, North ,31 Jan 2026,2026-02-01,NULL,300,290,KG,696.0,INR,-1,Pending,sea,B020,2026/11/19,CUST-263,negative lead time
+PO-1164, SFG-21 ,Valve Body,Supplier D,N/A,jaipur wh,west,22/01/2026,2026-13-07,NULL,25,15,PcS,455.0, EUR ,10,Delivered,rail,B165,08 Jun 2028,CUST-264,Delayed by weather
+PO-1165, RM-004 ,Aluminium Sheet,SUPPLIER H,S-H08,Chennai WH,NORTH,15 Feb 2026,17/02/26,19 Feb 2026,25,32,kg,326.03,INR,2,In transit,TRUCK,B018,2027.03.29,CUST-265,supplier missing
+PO-1166,RM-004,Aluminium Sheet,Supplier  J,S-J10,chennai wh,WEST,01/02/2026,05 Feb 2026,06 Feb 2026,40,40,KG,326.03,INR,,Partially delivered,Road,B190,null,CUST-266,currency mismatch?
+PO-1167, RM-010 ,Chemical Mix,supplier H,S-H08, Jaipur WH ,North,24-02-2026,2026/03/01,08 Mar 2026,300,300,ltr,220.4,inr,7,delivered, Sea ,B124,2026-13-07,CUST-267,currency mismatch?
+PO-1168,FG-221,Finished Gear, Supplier M ,S-M13,PLANT 1,East,19 Feb 2026,22 Feb 2026,2026.02.26,50,abc,PcS,1200.0,inr,4,DELIVERED,Sea,B131,07-01-2028,CUST-268,currency mismatch?
+PO-1169, FG-920 ,SENSOR KIT,SUPPLIER M,S-M13,lucknow wh,east,22/02/2026,2026.02.27,2026-02-28,60,50,PCS,2572.5,inr,1,NA,TRUCK,B044,32/02/2026,CUST-269,manual entry
+PO-1170,RM-011,LUBRICANT OIL, Supplier P ,S-P16,Ahmedabad WH, North ,2026-01-02,02/01/26,06 Jan 2026,25,15,LT,abc,INR,4,DELIVERED,ROAD,B122,15-06-2027,CUST-270,currency mismatch?
+PO-1171, RM-010 ,chemical mix,Supplier A,S-A01,Nagpur WH,EAST,2026.01.03,08-01-2026,2026.01.13,40,20,Ltr,215.99,inr,5,NA,Road,B122,16/05/28,CUST-271,Delayed by weather
+PO-1172,RM-004,aluminium sheet,supplier e,S-E05,jaipur wh,WEST,2026.01.12,2026.01.17,22-01-2026,200,195,Kg,326.03, INR ,5,,Air,B058,12/04/2027,CUST-272,Delayed by weather
+PO-1173,RM-005,rubber seal,supplier J,S-J10,Delhi Warehouse,north,2026.03.18,20-03-2026,24-03-2026,NULL,60,KG,73.7, INR ,4,Partially Delivered,sea,B040,2027-04-23,CUST-273,ship date missing
+PO-1174,RM-005,rubber seal,supplier o,S-O15,Plant 1,WEST,07/02/2026,2026-02-08,2026/02/11,0,0,kg,78.96,usd,3,cancelled, Road ,B174,29 Jan 2027,CUST-274,currency mismatch?
+PO-1175, FG-777 ,Control Panel, Supplier H ,S-H08,Bangalore WH,west,10/02/26,05 Feb 2026,2026-13-07,100,NULL,PcS,15000.0,INR,1,delivered,Road,B180,30 Aug 2026,CUST-275,ship date before order date
+PO-1176,SFG-21,VALVE BODY,Supplier  R,S-R18,Ahmedabad WH,south,2026-03-15,18 Mar 2026,23 Mar 2026,500,495,pcs,455.0, INR ,5,delivered,Air,B155,06/04/28,CUST-276,currency mismatch?
+PO-1177,RM-004,Aluminium Sheet,Supplier R,S-R18,MUMBAI_WH,WEST,2026-01-09,11-01-2026,21 Jan 2026,50,50,KG,310.5,INR,10,delivered,Road,B027,2026.11.23,CUST-277,manual entry
+PO-1178,RM-011,lubricant oil,SUPPLIER N,S-N14,Plant 1,WEST,24-01-2026,2026-13-07,01 Feb 2026,1000,995,LT,130.0,INR,5,cancelled,Road,B198,2026-13-07,CUST-278,duplicate candidate
+PO-1179,FG-777,CONTROL PANEL,Supplier-B,S_B02,Lucknow Wh, West ,2026/01/22,2026.01.27,2026-13-07,200,200,pcs,14700.0,inr,8,Delivered,Sea,b174,2026-13-07,CUST-279,Delayed by weather
+PO-1180,FG-221,finished gear,Supplier  D,N/A, Ahmedabad WH ,NORTH,20/01/2026,25 Jan 2026,29-01-2026,200,198,pcs,1224.0,inr,4,delieverd, Road ,B042,18/12/2026,CUST-280,same day delivery
+PO-1181,sfg-33,Casing Unit,SUPPLIER N,S-N14,Lucknow Wh,north,25/02/2026,28/02/2026,2026.03.04,300,298,PcS,795.6,INR,4,Delivered, Sea ,B180,2027/05/11,CUST-281,same day delivery
+PO-1182,rm-011,LUBRICANT OIL,Supplier K,S-K11,BANGALORE WH,south,2026-01-06,06 Jan 2026,2026-13-07,400,400, l ,130.0,INR,NULL,DELIVERED,Sea,B029,12/10/2026,CUST-282,duplicate candidate
+PO-1183,sfg-17,Semi Finished Valve,supplier r,S-R18,Pune Wh, East ,27-02-2026,04/03/2026,,800,800,pcs,340.75, INR ,1,in transit,SEA,B012,2028.04.02,CUST-283,manual entry
+PO-1184,RM-005,rubber seal,Supplier  I,S-I09,Delhi Warehouse,East,07 Jan 2026,12/01/26,15/01/2026,120,115,KGS,75.2,inr,3,NA,air,B105,31-03-2028,CUST-284,On time
+PO-1185,RM-010,Chemical Mix,Supplier P,S-P16,Plant 1,South,24/03/26,26 Mar 2026,2026-03-26,300,300,ltr,220.4,INR,0,delieverd,Road,B026,14-03-2028,CUST-285,On time
+PO-1186,RM-004,Aluminium Sheet,Supplier  A,S-A01,Vizag Wh,NORTH,2026-01-14,18/01/2026,22/01/2026,0,0,KG,310.5,inr,4,DELIVERED,SEA,B058,20/06/28,CUST-286,manual entry
+PO-1187,RM-005,rubber seal,SUPPLIER E,S-E05, Pune WH ,south,2026.02.19,22/02/26,01 Mar 2026,NULL,50,kg,75.2,inr,7,NA,Sea,,05/11/27,CUST-287,same day delivery
+PO-1188,FG-221,Finished Gear,supplier H,S-H08,chennai wh, South ,08 Jan 2026,13-01-2026,15/01/26,0,NULL,PCS,1200.0,INR,2,Delivered,road,B153,N/A,CUST-288,partial shipment
+PO-1189, FG-777 ,CONTROL PANEL, Supplier J ,S-J10,Plant 1,South,24/02/26,2026-13-07,2026-03-01,50,NA,PCS,15300.0,INR,4,Delivered,Road,B123,14/07/27,CUST-289,same day delivery
+PO-1190,SFG-88, Actuator Block ,supplier j,S-J10,kolkata wh,south,10 Feb 2026,2026.02.13,18 Feb 2026,75,65,PcS,980.0, INR ,5,Pending, Rail ,NULL,2027.12.18,CUST-290,On time
+PO-1191,rm-001,Steel Coil,Supplier  E,S-E05,Plant 2,east,2026.03.12,2026/03/12,19-03-2026,60,58,KGS,53.55, INR ,7,delivered,Road,B067,12-01-2028,CUST-291,multiple null-like values
+PO-1192,sfg-88,ACTUATOR BLOCK,supplier O,S-O15,AHMEDABAD WH, West ,14/01/2026,NULL,2026/01/16,60,58,PCS,980.00, USD ,2,delieverd, Truck ,B072,28/10/25,CUST-292,multiple null-like values
+PO-1193,SFG-21,valve body,SUPPLIER F,S-F06,Chennai WH, East ,23 Feb 2026,N/A,05 Mar 2026,100, 90 ,pcs,464.1,inr,-1,In Transit,rail,B158,27/01/2027,CUST-293,negative lead time
+PO-1194,RM-001,Steel Coil,supplier j,S-J10,Hyderabad WH,North,2026.03.31,03 Apr 2026,2026-04-13,1000,998,KGS,52.5,USD,10,delivered, Rail ,B153,2027-03-25,CUST-294,same day delivery
+PO-1195,FG-120,Gasket Kit,supplier A,S-A01,Pune WH, South ,06/03/26,08 Mar 2026,12-03-2026,210,210,pcs, 225.0 ,USD,4,Delivered,Air,B096,2028/02/21,CUST-295,supplier missing
+PO-1196, RM-001 ,Steel Coil,SUPPLIER N,S-N14,Bangalore WH,South,2026.01.04,2026/01/08,16-01-2026,50,45,Kg, 55.12 ,INR,8,delivered, Air ,B077, ,CUST-296,ship date missing
+PO-1197,rm-009,COPPER WIRE, Supplier F ,null,hyderabad wh,North,23/01/2026,2026-01-28,2026/02/06,40,40,kg,710.2,inr,9,Delivered,AIR,B156,2026.09.04,CUST-297,extra spaces
+PO-1198,FG-333,Motor Assembly,Supplier N,S-N14,lucknow wh,EAST,10/02/2026,14/02/26,2026-13-07,600,598,nos,5488.0,INR,1,DELIVERED, Rail ,B105,2027.06.10,CUST-298,duplicate candidate
+PO-1199,RM-003,Packaging Foam,Supplier  N,S-N14, Nagpur WH ,West,2026.02.10, ,N/A, 120 ,120,Kg,15.75,inr,five,DELIVERED, Rail ,B099,13-04-2027,CUST-299,
+PO-1200,RM-004,Aluminium Sheet,SUPPLIER A,S-A01,Chennai Wh, North ,2026/01/02,03/01/26,04-01-2026,400,380,KG,326.03,usd,1,Pending, Truck ,B067,2026-08-16,CUST-300,
+PO-1201,RM-010,chemical mix,supplier C,S-C03,Mumbai_Wh,west,08/01/2026,N/A,09/01/26,120,118,ltr, 224.81 ,INR,0,DELIVERED, Sea ,B182, ,CUST-301,extra spaces
+PO-1202, SFG-88 ,Actuator Block,supplier n,S-N14,Chennai WH,South,20/02/2026,NULL,02 Mar 2026,400, 400 ,PCS,1029.0,usd,6,delieverd,air,B153,2027.06.07,CUST-302,currency mismatch?
+PO-1203,FG-500,Pump Unit, Supplier J ,S-J10,Vizag WH,South,2026/01/22,24/01/2026,2026-02-03,50,50,pcs,9345.0,inr,10,delivered,SEA,B020,NA,CUST-303,On time
+PO-1204,fg-500,PUMP UNIT,supplier D,S-D04,HYDERABAD WH,NORTH,2026.01.19,2026.01.22,2026.01.25,abc,75,PCS,8900.0, INR ,3,delieverd,truck,B071,25/04/2028,CUST-304,non numeric qty ordered
+PO-1205,rm-002,Plastic Resin,Supplier G,S-G07,HYDERABAD WH,north,07 Jan 2026,2026-01-10,2026.01.14,25,23,KG,89.99, INR ,4,pending,TRUCK,B183,2027-04-16,CUST-305,manual entry
+PO-1206,fg-221,FINISHED GEAR,Supplier  D,N/A,delhi warehouse, West ,30-03-2026,01-04-2026,2026/04/09,500,498,PCS, 1200.0 ,inr,8,partial shipment,TRUCK,B194,2027.02.26,CUST-306,
+PO-1207, FG-500 ,Pump Unit,SUPPLIER E,S-E05,chennai wh,SOUTH,08 Feb 2026,2026-02-13,17/02/2026,25,5,pcs,8900.0,INR,4,Delivered,AIR,B053,2026/11/30,CUST-307,extra spaces
+PO-1208,fg-221,Finished Gear,SUPPLIER N,S-N14,DELHI WAREHOUSE,NORTH,06/02/26,09/02/26,2026-02-10,600,620,PCS,1200.0, INR ,1,NA,TRUCK,B041,2027/08/10,CUST-308,extra spaces
+PO-1209,RM-003,Packaging Foam,Supplier - B,S_B02,Bangalore WH,south,30 Jan 2026,30 Jan 2026,2026/02/09,abc,58,KG,15.75, INR ,10,,road,B017, ,CUST-309,non numeric qty ordered
+PO-1210,FG-221,FINISHED GEAR,SUPPLIER R,S-R18,Vizag Wh,NORTH,2026-13-07,14/02/26,2026-02-24,1500,1500,PCS,1200.0, INR ,10,in transit,TRUCK,B113,2027-11-03,CUST-310,Delayed by weather
+PO-1211,RM-002,Plastic Resin,Supplier  K,S-K11,Kolkata WH,East,26/01/2026,2026/01/28,28/01/2026,abc,null,kg,89.99, INR ,0,Pending,Sea,B019,N/A,CUST-311,supplier missing
+PO-1212,FG-333,motor assembly,Supplier D,S-D04,Lucknow WH,east,15/02/2026,2026-02-16,32/02/2026,0,0,Nos,5880.0,INR,5,Pending,TRUCK,B185,02 May 2027,CUST-312,Delayed by weather
+PO-1213,RM-004,Aluminium Sheet,supplier-B,S_B02,Pune WH,West,2026.03.21,2026-13-07,28/03/2026,50,50,KGS,,inr,five,delivered,Truck,B061,08/09/28,CUST-313,multiple null-like values
+PO-1214,sfg-33,CASING UNIT,Supplier  N,S-N14,vizag wh,WEST,08-01-2026,NA,16/01/26,600,abc,PcS,764.4,inr,8,NA, Air ,B098,2027/11/05,CUST-314,ship date missing
+PO-1215, RM-003 ,Packaging Foam, Supplier I ,S-I09,Lucknow WH,EAST,2026-01-09,2026/01/12,2026-13-07,210,190,KG,16.54,INR,2,Partially delivered,TRUCK,B060,32/02/2026,CUST-315,partial shipment
+PO-1216,SFG-88,Actuator Block,Supplier K,S-K11,kolkata wh, East ,02 Mar 2026,NULL,2026.03.13,25,25,PcS,980.0, INR ,9,DELIVERED,Rail,B184,2028/02/11,CUST-316,manual entry
+PO-1217,sfg-88,actuator block,supplier H,S-H08,Ahmedabad WH,east,15/01/26,2026-01-20,23/01/2026,1000,990,PcS,999.6,INR,3,delieverd, Rail ,B059,24 Oct 2027,CUST-317,ship date missing
+PO-1218, RM-009 ,Copper Wire,SUPPLIER C,S-C03,Delhi Warehouse,west,2026.02.24,2026-02-26,2026-13-07,600,590,KGS,724.4, INR ,2,Delivered,Truck,B190,2026-13-07,CUST-318,same day delivery
+PO-1219,SFG-21,Valve Body,Supplier  K,S-K11,kolkata wh,east,2026-13-07,2026.01.24,24-01-2026,120,null,pcs,455.0,inr,0,DELIVERED,Road,B113,09 Mar 2027,CUST-319,
+PO-1220,SFG-17,SEMI FINISHED VALVE,Supplier C,S-C03,Vizag WH,South,2026.02.05,10 Feb 2026,20-02-2026,60,60,pcs,340.75, INR ,10,delieverd,rail,B173,02 Nov 2026,CUST-320,currency mismatch?
+PO-1221,RM-011,LUBRICANT OIL,Supplier L,S-L12,Ahmedabad WH,south,08-02-2026,2026.02.09,2026/02/13,1500,1498, l ,130.0,inr,4,DELIVERED,ROAD,B115,2027/07/11,CUST-321,same day delivery
+PO-1222,RM-002,plastic resin, Supplier J ,S-J10,Ahmedabad Wh, West ,29/01/2026,2026/02/02,04 Feb 2026,120,NULL,KGS,89.99, INR ,2,Delivered, Road ,,10/07/27,CUST-322,extra spaces
+PO-1223,FG-120,Gasket Kit,Supplier  M,S-M13,Delhi Warehouse, East ,11-01-2026,2026.01.11,12 Jan 2026,-800,abc,pcs,225.0,inr,1,pending,Rail,B080,2026-13-07,CUST-323,manual entry
+PO-1224,SFG-21,Valve Body,supplier K,S-K11,DELHI WAREHOUSE,north,13/01/26,17 Jan 2026,19-01-2026,120,100,PCS,NULL,INR,2,delivered,Truck,B197,05 Dec 2027,CUST-324,
+PO-1225,fg-221,FINISHED GEAR,Supplier  P,S-P16,delhi warehouse,WEST,18 Jan 2026,23/01/2026,2026-01-31,-800,798,PcS,"1,260.00", INR ,8,DELIVERED,Rail,B167,32/02/2026,CUST-325,extra spaces
+PO-1226,rm-011,Lubricant Oil,supplier L,S-L12,Nagpur Wh,NORTH,25 Jan 2026,27-01-2026,2026-13-07,800,795, l ,132.60,inr,4,In Transit,RAIL,B040,12-11-2026,CUST-326,
+PO-1227,FG-920,Sensor Kit,SUPPLIER M,NA, Kolkata WH ,WEST,02/03/2026,04/03/2026,08 Mar 2026,400,395,pcs,2572.5,inr,4,,RAIL,B114,2026-13-07,CUST-327,
+PO-1228,SFG-17,Semi Finished Valve,Supplier  I,S-I09,nagpur wh,North,15 Mar 2026,15 Mar 2026,22 Mar 2026,1000,998,PcS,340.75, INR ,7,delivered,Air,B034,2026-12-11,CUST-328,Delayed by weather
+PO-1229,RM-001,steel coil, Supplier J ,S-J10,Hyderabad WH,east,16-01-2026,18/01/2026,25/01/26,50,45,KG,55.12,inr,7,Delivered,AIR,B003,03-03-2027,CUST-329,multiple null-like values
+PO-1230,fg-120,Gasket Kit,Supplier E,S-E05,Jaipur WH,South,2026-03-31,2026-04-03,2026/04/08,300,300,PcS,225.0,INR,5,NA, Air ,B120,07-02-2026,CUST-330,extra spaces
+PO-1231,sfg-33,CASING UNIT,Supplier P,S-P16,NAGPUR WH,west,08-02-2026,08 Feb 2026,2026/02/11,60,58,PcS,780.0,INR,3,DELIVERED,RAIL,b179,28 Jan 2028,CUST-331,supplier missing
+PO-1232,fg-333,MOTOR ASSEMBLY,Supplier H,S-H08, Plant 2 ,North,19/02/2026,2026-13-07,25-02-2026,75,73,NOS,5488.0,INR,5,DELIVERED, Road ,B172,2025-04-19,CUST-332,partial shipment
+PO-1233,FG-120,GASKET KIT,SUPPLIER A,S-A01,Delhi Warehouse, East ,2026-01-17,21 Jan 2026,29/01/26,600,590,PCS,220.50,inr,8,DELIVERED,Truck,B155,2027/11/01,CUST-333,multiple null-like values
+PO-1234,SFG-21,valve body,SUPPLIER L,NA,KOLKATA WH,North,27 Feb 2026,01-03-2026,2026/03/05,40,35,PCS,abc, INR ,4,delivered,Air,B163,19/01/2028,CUST-334,
+PO-1235, RM-011 ,LUBRICANT OIL, Supplier-B ,NA,pune wh,West,28 Jan 2026,2026.01.31,2026.02.04,100,abc,L,136.5,inr,4,delivered, Truck ,B107,2028/06/05,CUST-335,
+PO-1236,FG-500,Pump Unit,supplier R,S-R18,pune wh, North ,27/01/26,01/02/2026,09/02/2026,500,500,pcs,8900.0,inr,8,DELIVERED, Rail ,B111,07 Oct 2027,CUST-336,On time
+PO-1237, SFG-33 ,Casing Unit,supplier Q,S-Q17,Jaipur WH,west,2026.01.29,2026.02.01,2026/02/08,1000,1000,pcs,764.4,INR,7,DELIVERED, Road ,B168,30/01/2027,CUST-337,Delayed by weather
+PO-1238,RM-010,Chemical Mix,SUPPLIER K,S-K11,Delhi Warehouse, East ,09 Jan 2026,2026.01.09,2026-01-12,1000,,ltr,215.99, INR ,3,DELIVERED,AIR,B063,27-10-2027,CUST-338,Delayed by weather
+PO-1239,RM-004,Aluminium Sheet,SUPPLIER F,S-F06,Pune WH,west,2026.03.26,28 Mar 2026,30-03-2026,200,180,kg,304.29, USD ,2,NA, Sea ,B076,2028.08.31,CUST-339,multiple null-like values
+PO-1240,fg-777,CONTROL PANEL,supplier m,S-M13,AHMEDABAD WH, South ,14 Feb 2026,19/02/26,21/02/2026,400,,pcs,15300.0, INR ,NULL,delieverd,TRUCK,B172,32/02/2026,CUST-340,
+PO-1241,RM-009,Copper Wire,supplier h,S-H08, Chennai WH ,west,2026.01.23,2026.01.23,N/A,210,205,kg,710.2, INR ,9,delivered, Air ,B150,2028/03/17,CUST-341,Delayed by weather
+PO-1242,SFG-21,VALVE BODY,SUPPLIER I,S-I09,Vizag WH,south,2026.02.13,15-02-2026,2026.02.25,300,290,PCS,455.0,INR,10,partial shipment,Road,B042,23-02-2027,CUST-342,same day delivery
+PO-1243, SFG-17 ,Semi Finished Valve, Supplier P ,S-P16,Vizag WH,EAST,2026/02/17,N/A,2026.02.22,400,390,PCS,347.56,INR,4,delieverd,TRUCK,B105,2027-08-18,CUST-343,partial shipment
+PO-1244,RM-011,LUBRICANT OIL,Supplier  I,S-I09,LUCKNOW WH,West,08/01/26, ,08/01/26,400,400, l ,130.0,INR,0,delieverd,AIR,B039,2028.03.01,CUST-344,ship date missing
+PO-1245,fg-120,Gasket Kit,SUPPLIER P,S-P16,plant 2,North,09 Mar 2026,09-03-2026,17/03/2026,500,500,PCS,229.5,inr,8,In Transit, Truck ,B145,N/A,CUST-345,ship date before order date
+PO-1246,RM-011,lubricant oil,SUPPLIER K,S-K11,JAIPUR WH,west,25/03/2026,2026-13-07,2026-04-02,500,490,L,130.0,inr,,Delivered, Air ,B139,2027-09-20,CUST-346,currency mismatch?
+PO-1247, RM-004 ,Aluminium Sheet,Supplier  F,S-F06, Plant 2 ,SOUTH,16 Jan 2026,19-01-2026,2026-13-07,500,490,kg,,INR,9,Delivered,Road,B005,03/08/26,CUST-347,same day delivery
+PO-1248,SFG-21,VALVE BODY,Supplier L,S-L12,LUCKNOW WH,West,2026-01-21,24-01-2026,N/A,100,95,pcs, 455.0 ,inr,2,delivered,Truck,B128,N/A,CUST-348,duplicate candidate
+PO-1249, RM-001 ,Steel Coil,Supplier  J,S-J10,Ahmedabad WH,WEST,02-02-2026,2026.02.03,08/02/2026,500,495,KG,52.5, INR ,5,delivered, Air ,B169,2026-10-30,CUST-349,manual entry
+PO-1250, SFG-33 ,CASING UNIT,Supplier  A,S-A01,LUCKNOW WH, West ,2026.03.03,05-03-2026,08 Mar 2026,abc,598,PCS,780.0,INR,3,In transit,Sea,B048,2027.05.23,CUST-350,non numeric qty ordered
+PO-1251, SFG-88 ,ACTUATOR BLOCK,supplier Q,S-Q17,Lucknow Wh, South ,14-03-2026,2026/03/18,NA,40,20,PcS,980.0,INR,,delivered,rail,B058,24/02/27,CUST-351,supplier missing
+PO-1252,FG-221,Finished Gear,SUPPLIER M,S-M13,Lucknow WH, South ,01/02/26,2026/02/03,2026-13-07,200,200,PcS,1260.0, INR ,1,DELIVERED, Sea ,B003,16 May 2028,CUST-352,
+PO-1253,FG-500,PUMP UNIT,supplier N,S-N14,Kolkata WH, North ,2026-13-07,23 Mar 2026,2026-03-27,210,210,PCS,8900.0,inr,4,delieverd,Air,B150,2028.02.11,CUST-353,same day delivery
+PO-1254,FG-221,finished gear,Supplier A,S-A01,CHENNAI WH,south,04/01/26,2026.01.09,14/01/2026,60,60,PCS, 1200.0 ,inr,5,delivered, Sea ,B115,30/08/26,CUST-354,manual entry
+PO-1255, RM-009 ,copper wire,Supplier F,S-F06, Pune WH ,North,15 Jan 2026,2026/01/16,2026/01/25,300,,KG,696.0,inr,9,Delivered,truck,B183,27/03/2028,CUST-355,duplicate candidate
+PO-1256,FG-500,Pump Unit,SUPPLIER O,S-O15,Kolkata WH,south,2026.02.22,23/02/26,2026.03.03,600,590,PCS,9345.0, INR ,8,DELIVERED,road,B095,32/02/2026,CUST-356,ship date missing
+PO-1257, RM-009 , Copper Wire ,Supplier  A,S-A01,Jaipur Wh, West ,2026.03.13,18/03/26,,,498,kg,745.71,INR,0,Delivered,rail,B126,29/11/27,CUST-357,partial shipment
+PO-1258,rm-004,Aluminium Sheet,supplier k,S-K11,Mumbai_WH,North,2026-02-21,2026-02-25,2026-03-07,600,580,KGS,310.5,INR,10,delieverd,sea,B128,2026/12/04,CUST-358,same day delivery
+PO-1259,rm-009,COPPER WIRE,supplier O,S-O15,Plant 1,South,2026/03/06,07-03-2026,2026/03/14,,20,kg,710.2, INR ,7,delivered,Rail,B133,2027.02.28,CUST-359,multiple null-like values
+PO-1260,RM-010,Chemical Mix,supplier j,S-J10,Pune Wh,south,27 Feb 2026,NULL,NA,0,0,ltr,220.4,inr,4,In transit,Road,B198,2027-06-21,CUST-360,manual entry
+PO-1261,SFG-33,casing unit,Supplier  C,S-C03, Plant 1 ,SOUTH,05 Mar 2026,06 Mar 2026,N/A,25,25,PCS,780.0,EUR,9,NA, Air ,NULL,2027-05-02,CUST-361,same day delivery
+PO-1262, RM-009 ,Copper Wire,supplier R,S-R18,Pune WH,South,2026.02.02,07-02-2026,2026-13-07,300,295,kg,696.0, INR ,6,Partially Delivered,RAIL,B128,05-03-2027,CUST-362,On time
+PO-1263, SFG-21 ,Valve Body,SUPPLIER Q,S-Q17,MUMBAI_WH,SOUTH,2026-13-07,2026-01-29,01/02/26,400,415,pcs,464.10, INR ,,in transit,Rail,B082,27-09-2026,CUST-363,Delayed by weather
+PO-1264,fg-333,motor assembly,Supplier P,S-P16, Delhi Warehouse , West ,10-03-2026,12-03-2026,15 Mar 2026,75,75,Nos,5600.0,INR,3,DELIVERED,Air,B011,25/12/27,CUST-364,extra spaces
+PO-1265,rm-004,aluminium sheet,Supplier R,S-R18,Nagpur WH,west,08-02-2026,2026.02.12,2026-02-18,40,NULL,Kg,abc,INR,6,Partially Delivered,Air,B099,20/03/2028,CUST-365,
+PO-1266,sfg-33,casing unit,supplier o,S-O15,ahmedabad wh, East ,23-01-2026,2026-13-07,29-01-2026,60,40,PCS,780.0, INR ,4,in transit,RAIL,B142,32/02/2026,CUST-366,
+PO-1267,RM-010,Chemical Mix,Supplier  K,S-K11,Hyderabad WH, North ,2026/02/15,2026.02.19,,abc,20,Ltr,220.40, INR ,7,Partially Delivered, Road ,B082,11/02/27,CUST-367,ship date missing
+PO-1268,sfg-17,Semi Finished Valve,NULL,S-R18,CHENNAI WH,West,06 Feb 2026,08 Feb 2026,2026-02-09,1000,null,PcS,340.75,INR,1,Delivered,Air,b020,05-02-2027,CUST-368,partial shipment
+PO-1269,fg-500,PUMP UNIT,Supplier  F,S-F06,AHMEDABAD WH,EAST,2026.03.28, ,2026-04-01,NULL,1000,PCS,NULL,inr,,in transit,Truck,B180,14/12/26,CUST-369,currency mismatch?
+PO-1270, RM-003 ,Packaging Foam,SUPPLIER I,S-I09, Plant 1 , East ,27/02/26,01/03/26,2026-03-08,500,498,KG,15.75,INR,7,DELIVERED, Road ,B120,20-12-2027,CUST-370,same day delivery
+PO-1271,RM-011,LUBRICANT OIL,supplier G,S-G07,Ahmedabad Wh,west,2026/02/25,28/02/26,02-03-2026,NULL,1490, l ,136.5,INR,2,delivered,RAIL,B127,2027/04/07,CUST-371,On time
+PO-1272,RM-005,rubber seal,Supplier  K,S-K11,PLANT 2,South,17/03/2026,21/03/26,24/03/26,200,198,kg,73.7, INR ,3,In Transit,Rail,B126,32/02/2026,CUST-372,manual entry
+PO-1273, FG-120 ,Gasket Kit,SUPPLIER N,S-N14,Plant 1, North ,2026.02.08,2026-02-10,NA,-75,75,pcs,225.0, INR ,3,Partially Delivered,ROAD,B161,2027-09-07,CUST-373,supplier missing
+PO-1274, FG-777 ,Control Panel,supplier-b,S_B02, Plant 1 ,south,05/03/26,05 Mar 2026,2026-13-07,75,75,pcs,,USD,1,DELIVERED,truck,B127,17 Oct 2027,CUST-374,extra spaces
+PO-1275,FG-221,Finished Gear, Supplier R ,S-R18,MUMBAI_WH,NORTH,2026/01/26,30-01-2026,,120,123,PCS,"1,224.00",inr,0,delivered,rail,B002,01/05/28,CUST-375,
+PO-1276,FG-333,motor assembly,supplier-b,S_B02,Nagpur WH,South,2026/03/14,16-03-2026,2026-03-19,,25,nos,5488.0,USD,3,,Road,B155,NULL,CUST-376,multiple null-like values
+PO-1277, RM-010 ,Chemical Mix,supplier D,S-D04, Nagpur WH ,north,2026.03.02,03/03/26,03 Mar 2026,60,abc,LTR,224.81,INR,0,delieverd,Truck,B188,,CUST-377,Delayed by weather
+PO-1278,RM-011,lubricant oil,SUPPLIER-B,S_B02, Hyderabad WH ,EAST,2026-01-12,2026/01/16,21-01-2026,1000,980, l ,, INR ,5,DELIVERED,road,B045,05/03/2028,CUST-378,multiple null-like values
+PO-1279, FG-120 ,Gasket Kit,Supplier C,S-C03,Vizag WH,West,15 Jan 2026,19/01/26,2026-13-07,40, 58 ,pcs,236.25,usd,8,NA, Road ,B030,24/06/27,CUST-379,currency mismatch?
+PO-1280, RM-003 ,Packaging Foam,SUPPLIER C,S-C03, Hyderabad WH ,West,2026.01.16,19 Jan 2026,2026-13-07,,600,KG,15.75,INR,5,In-Transit,Rail,B152,03-09-2026,CUST-380,On time
+PO-1281, RM-010 , Chemical Mix ,SUPPLIER N,,MUMBAI_WH, North ,29/03/2026,32/02/2026,08-04-2026,25,20,LTR,224.81,INR,9,Partially delivered,TRUCK,B065,26 May 2028,CUST-381,extra spaces
+PO-1282,rm-001,steel coil,SUPPLIER O,S-O15,ahmedabad wh,east,2026.03.31,2026-04-03,2026.04.03,500,490,Kg,53.55, INR ,0,Delivered,SEA,B171,2027.10.01,CUST-382,extra spaces
+PO-1283,rm-011,Lubricant  Oil,Supplier P,S-P16,PLANT 2, South ,32/02/2026,30/01/26,06 Feb 2026,1500,1498,LT,132.6,INR,7,delivered,Rail,B038,13/10/2026,CUST-383,Delayed by weather
+PO-1284,rm-001,Steel Coil,Supplier N,S-N14,Mumbai_Wh,North,2026/01/19,2026.01.24,2026/01/24,500,500,KGS,52.5, INR ,0,In transit,ROAD,B131,04/12/27,CUST-384,manual entry
+PO-1285,RM-010,Chemical Mix,SUPPLIER L,S-L12,Plant 1,EAST,27-01-2026,2026-01-30,2026/02/08,100,100,ltr,224.81, INR ,9,Cancelled,ROAD,NULL,2027-04-15,CUST-385,manual entry
+PO-1286,sfg-88,ACTUATOR BLOCK,Supplier - B,S_B02,bangalore wh,North,2026/02/05,05/02/26,2026-02-13,abc,210,pcs,980.0,eur,8,Delivered,sea,B160,22/05/2027,CUST-386,non numeric qty ordered
+PO-1287, SFG-21 ,VALVE BODY,SUPPLIER N,S-N14, Lucknow WH , West ,2026/02/27,32/02/2026,03/03/2026,60,40,PcS,445.9,inr,3,Pending, Rail ,B196,2026-13-07,CUST-387,duplicate candidate
+PO-1288,rm-001,Steel Coil, Supplier M ,S-M13,lucknow wh,East,2026.02.16,NULL,19/02/2026,1500,1498,KGS,52.5,inr,0,DELIVERED,Road,B041,32/02/2026,CUST-388,supplier missing
+PO-1289,rm-009,Copper Wire,SUPPLIER J,S-J10,Jaipur Wh,West,2026-02-24,25-02-2026,28/02/26,25,5,kg,710.2, INR ,3,Delivered,road,B142,2026-13-07,CUST-389,partial shipment
+PO-1290,FG-500,PUMP UNIT,Supplier  M,S-M13,JAIPUR WH, West ,2026-03-09,12/03/26,22/03/26,500,480,PCS,"9,078.00",INR,10,delieverd,AIR,B010,17/04/2027,CUST-390,currency mismatch?
+PO-1291,rm-004,ALUMINIUM SHEET, Supplier J ,S-J10,PUNE WH,North,2026/02/14,2026.02.17,23/02/26,800,800,Kg,310.5,USD,6,DELIVERED,Air,B080,32/02/2026,CUST-391,Delayed by weather
+PO-1292,FG-333,motor assembly,Supplier  I,S-I09,Delhi Warehouse,south,26/01/2026,2026-01-26,2026/02/04,600,600,nos,5600.0, INR ,9,delivered,ROAD,B141,06 Mar 2028,CUST-392,ship date missing
+PO-1293,rm-011,lubricant oil,Supplier H,S-H08, Vizag WH , North ,2026/02/25,28-02-2026,04/03/26,400,395,L,132.6,inr,4,Cancelled,AIR,B143,16-04-2027,CUST-393,ship date missing
+PO-1294,rm-011,LUBRICANT OIL,Supplier J,S-J10,Chennai WH,South,2026/02/13,2026-13-07,2026.02.23,abc,395,LT,130.0,inr,9,Delivered,Air,B014,32/02/2026,CUST-394,On time
+PO-1295,rm-009,copper wire,Supplier Q,S-Q17,Mumbai_WH,west,19-03-2026,2026/03/20,2026.03.24,40,38,Kg,710.2, USD ,4,delieverd,Road,B061,02 Aug 2027,CUST-395,ship date missing
+PO-1296,RM-002,plastic resin,SUPPLIER I,S-I09,kolkata wh,south,05/03/26,NA,2026/03/18,600,580,KGS,94.49,USD,10,in transit,TRUCK,B043,2027.05.28,CUST-396,multiple null-like values
+PO-1297,rm-002,PLASTIC RESIN,Supplier O,S-O15,Plant 1,EAST,2026-03-10,2026-13-07,13-03-2026,abc,NULL,kg,88.19, INR ,0,delieverd,Rail,B147,03 May 2027,CUST-397,supplier missing
+PO-1298,RM-010,Chemical Mix,SUPPLIER R,S-R18,NAGPUR WH,EAST,15 Jan 2026,32/02/2026,22/01/26,400,NULL,ltr,220.4,inr,6,Partially Delivered,Truck,B034,11/04/27,CUST-398,
+PO-1299,SFG-17,semi finished valve,supplier C,S-C03,Pune Wh, North ,15/02/2026,2026.02.16,32/02/2026,120,115,PcS,340.75,inr,-1,delivered,RAIL,B177,N/A,CUST-399,negative lead time
+PO-1300,SFG-88,Actuator  Block,supplier k,NA,Kolkata WH,north,10/02/26,2026/02/13,2026.02.14,75,55,PcS,980.00,inr,1,In transit,Truck,B160,15/09/26,CUST-400,duplicate candidate
+PO-1301,SFG-33,Casing Unit,Supplier D,S-D04,Delhi Warehouse,south,32/02/2026,2026-03-16,2026-13-07,40, 40 ,pcs,819.0,usd,3,In transit,rail,B169,2027-07-16,CUST-401,currency mismatch?
+PO-1302, RM-009 ,COPPER WIRE,supplier q,S-Q17,CHENNAI WH, West ,2026-13-07,06 Jan 2026,14/01/2026,210,205,KG,710.2,INR,-1,In-Transit,Air,B136,08/05/2027,CUST-402,negative lead time
+PO-1303,rm-004,aluminium sheet, Supplier A ,S-A01,KOLKATA WH, North ,2026-13-07,N/A,21/02/26,,75,KGS,304.29,INR,7,DELIVERED,road,B170,,CUST-403,partial shipment
+PO-1304,RM-010,Chemical Mix,Supplier  I,S-I09,Vizag WH,West,21/02/26,2026-02-19,2026.02.23,1500,1500,LTR,215.99, INR ,2,Partially delivered,RAIL,B165,2027/01/17,CUST-404,ship date before order date
+PO-1305,FG-221,Finished Gear,Supplier I,S-I09,Plant 1,east,17/03/26,N/A,2026-03-28, 600 ,590,pcs,1176.0,INR,10,delivered,Sea,B012,2027/09/03,CUST-405,ship date missing
+PO-1306,rm-011,LUBRICANT OIL, ,S-D04,MUMBAI_WH, East ,18/03/2026,NULL,01 Apr 2026,200,200,LT,136.5,INR,10,Cancelled,road,B085,08/01/2027,CUST-406,supplier missing
+PO-1307, SFG-88 ,actuator block,Supplier J,S-J10,vizag wh,west,20-01-2026,25-01-2026,26/01/2026,100,98,pcs,1029.0, INR ,1,Delivered,Air,B055,2026-10-07,CUST-407,Delayed by weather
+PO-1308,FG-500,pump unit,SUPPLIER M,S-M13,nagpur wh,south,11/01/2026,07/01/2026,32/02/2026,200,180,PcS,9078.0,inr,2,Delivered,SEA,B135,13 Jan 2028,CUST-408,ship date before order date
+PO-1309, RM-003 ,Packaging Foam,Supplier  C,S-C03,Plant 1,SOUTH,2026-03-03,2026-03-03,2026-13-07,500,500,KG,15.75, INR ,7,In transit,sea,B067,16/02/2027,CUST-409,partial shipment
+PO-1310,RM-002,Plastic Resin,supplier l,S-L12,Hyderabad Wh,South,15 Mar 2026,18/03/2026,18/03/2026,40,30,Kg,91.79,inr,0,Partially delivered,Rail,B048,20 Jan 2027,CUST-410,
+PO-1311,FG-221,Finished Gear, Supplier J ,S-J10,DELHI WAREHOUSE,NORTH,01/02/2026,04 Feb 2026,NULL,500,490,PCS,1200.0, INR ,2,partial shipment,Sea,B162,2027.09.08,CUST-411,currency mismatch?
+PO-1312,RM-005,rubber seal,supplier o,S-O15,Lucknow WH, North ,28 Mar 2026,2026-04-02,2026.04.07, 40 ,40,KG,75.2,INR,,partial shipment,Air,B135,2027.06.24,CUST-412,manual entry
+PO-1313,rm-004,ALUMINIUM SHEET,SUPPLIER O,S-O15,JAIPUR WH,West,12-03-2026,17 Mar 2026,25/03/26,0,NULL,kg,316.71, INR ,8,Pending,Rail,B033,24-05-2028,CUST-413,On time
+PO-1314,FG-221,Finished Gear,Supplier G,S-G07, Delhi Warehouse , South ,28/01/26,2026-02-01,10/02/26,75,75,pcs,"1,200.00",INR,9,DELIVERED, Air ,B134,2028-02-08,CUST-414,manual entry
+PO-1315,RM-010,CHEMICAL MIX,Supplier D,S-D04, Delhi Warehouse ,south,02/02/2026,2026.02.04,09-02-2026,,20,ltr,215.99, INR ,5,delivered,Rail,B054,NA,CUST-415,
+PO-1316, RM-009 ,COPPER WIRE,Supplier A,S-A01,Plant 1,west,2026.02.02,2026-13-07,2026.02.08,600,580,Kg,724.40,INR,2,DELIVERED,rail,B165,2028-04-17,CUST-416,manual entry
+PO-1317,FG-120,GASKET KIT,Supplier D,S-D04,Ahmedabad WH,West,04 Jan 2026,2026-01-09,16/01/2026,100,90,pcs,229.5,INR,7,DELIVERED, Air ,B134,03/12/26,CUST-417,extra spaces
+PO-1318,RM-005,rubber seal,supplier G,S-G07,Plant 2,East,15/03/26,2026-03-17,2026/03/18,210,abc,KG,76.7,INR,1,DELIVERED,TRUCK,B008,32/02/2026,CUST-418,ship date missing
+PO-1319, FG-777 ,Control Panel,SUPPLIER G,S-G07,Vizag Wh,West,24-03-2026,27-03-2026,2026.04.06,75,75,pcs,14700.0, INR ,10,In-Transit,AIR,b015,2028-01-05,CUST-419,manual entry
+PO-1320,RM-009,COPPER WIRE,Supplier G,S-G07,pune wh,west,14 Jan 2026,2026.01.17,null,-50,48,KG,745.71,INR,8,In Transit,ROAD,B029,2027/03/05,CUST-420,ship date missing
+PO-1321, FG-333 ,Motor  Assembly, Supplier P ,S-P16,Nagpur Wh,south,24/01/26,2026/01/24,2026.01.24,100,abc,NOS,5600.0, INR ,0,delieverd, Air ,B147,02 Feb 2028,CUST-421,multiple null-like values
+PO-1322,FG-777,Control Panel,supplier e,S-E05,vizag wh,North,16/02/2026,16-02-2026,2026.02.22,75,75,PCS,15000.0,inr,6,delieverd,Sea,B004,30/07/27,CUST-422,multiple null-like values
+PO-1323,FG-920,Sensor Kit,SUPPLIER N,S-N14,Plant 1, East ,06-03-2026,08 Mar 2026,18-03-2026,75,75,PcS,NULL, INR ,10,In transit, Sea ,B116,16/06/2028,CUST-423,multiple null-like values
+PO-1324,RM-005,Rubber Seal,supplier e,S-E05,Pune Wh,south,2026/03/05,10/03/2026,2026.03.10,400,390,KG,75.2,INR,0,Delivered,sea,B194,10/10/27,CUST-424,supplier missing
+PO-1325,RM-004,ALUMINIUM SHEET,supplier k,S-K11, Kolkata WH ,SOUTH,03 Feb 2026,03-02-2026,2026-02-13,400,400,Kg,310.5,USD,10,delivered,Road,B151,2027.03.26,CUST-425,ship date missing
+PO-1326,rm-009,Copper Wire,supplier-b,S_B02, Chennai WH , East ,2026-03-16,,21 Mar 2026,40,40,KGS,710.20,inr,4,DELIVERED, Air ,B028,2027.04.26,CUST-426,currency mismatch?
+PO-1327,fg-500,PUMP UNIT,Supplier  A,S-A01,HYDERABAD WH, East ,17/01/26,18/01/26,26/01/2026,500,498,PCS,NULL, INR ,8,delieverd,ROAD,B138,2026-13-07,CUST-427,partial shipment
+PO-1328, RM-011 ,Lubricant Oil, Supplier C ,S-C03,Chennai WH, South ,2026/03/24,2026-03-24,29 Mar 2026,400,400,LT,130.00,INR,5,delivered,truck,B073,01/08/2027,CUST-428,extra spaces
+PO-1329,rm-001,Steel Coil,Supplier  J,S-J10,LUCKNOW WH,NORTH,08-01-2026,2026-01-11,2026.01.11,50,45,Kg,52.5,INR,0,delieverd, Road ,b133,07 Oct 2026,CUST-429,partial shipment
+PO-1330,rm-010,chemical mix,Supplier F,S-F06,vizag wh,north,2026/02/11,12 Feb 2026,14-02-2026,75,70,Ltr,220.4,eur,2,DELIVERED,Rail,B020,29 May 2028,CUST-430,extra spaces
+PO-1331,fg-333,Motor Assembly,supplier a,S-A01,DELHI WAREHOUSE, South ,26 Feb 2026,26/02/2026,NULL,40,40,NOS,5488.0, INR ,2,DELIVERED,Air,B149,20 Mar 2028,CUST-431,extra spaces
+PO-1332,FG-920,sensor kit,Supplier M,S-M13,Bangalore WH,NORTH,2026/01/26,26/01/2026,null,300,300,PcS,NULL, INR ,4,delivered,Air,B187,04 Mar 2028,CUST-432,Delayed by weather
+PO-1333, FG-333 ,motor assembly, Supplier N ,,ahmedabad wh, South ,07/01/2026,07-01-2026,2026/01/16,50,50,nos,"5,600.00",inr,NULL,, Air ,B186,2027-07-01,CUST-433,extra spaces
+PO-1334,FG-120,Gasket  Kit,Supplier  E,S-E05,BANGALORE WH,SOUTH,31-03-2026,02/04/2026,2026-04-07,600,abc,pcs,225.0,inr,5,In transit,Air,B178,2028-05-23,CUST-434,On time
+PO-1335,RM-003,Packaging Foam,NA,S-N14, Kolkata WH , North ,22/02/26,23/02/26,32/02/2026,75,55,KGS,15.75,usd,2,Cncld,TRUCK,B057,2028/08/11,CUST-435,currency mismatch?
+PO-1336,rm-004,Aluminium Sheet,Supplier Q,S-Q17,mumbai_wh,North,2026-01-27,27/01/2026,02/02/26,200,200,Kg,310.5,inr,6,Delivered,rail,NULL,2028.06.17,CUST-436,Delayed by weather
+PO-1337,fg-500,Pump Unit,NULL,S-A01, Chennai WH , North ,2026/03/13,2026-03-13,2026-03-18,120,110,pcs,"8,722.00", USD ,5,partial shipment,Air,B021,10/09/27,CUST-437,extra spaces
+PO-1338,sfg-17,semi finished valve,SUPPLIER A,S-A01, Pune WH , South ,27 Mar 2026,01-04-2026,02-04-2026,400,N/A,pcs,347.56,INR,1,cancelled, Road ,B156,23 Mar 2028,CUST-438,duplicate candidate
+PO-1339,FG-333,Motor  Assembly,supplier a,S-A01, Mumbai_WH ,East,2026.01.22,2026/01/25,04/02/26,75,,NOS,5600.0,inr,10,delivered,truck,B162,2028/06/09,CUST-439,Delayed by weather
+PO-1340,FG-777,Control Panel,SUPPLIER L,S-L12,Ahmedabad Wh,NORTH,2026.03.11,2026.03.12,12-03-2026,25,25,PcS,15000.0,inr,five,delivered,road,B145,04/12/26,CUST-440,same day delivery
+PO-1341, FG-920 ,SENSOR KIT,supplier H,S-H08,delhi warehouse,WEST,N/A,06-02-2026,19-02-2026,abc, 200 ,PCS,2499.0,inr,8,,air,B075,03/06/2028,CUST-441,ship date before order date
+PO-1342,SFG-17,semi finished valve,SUPPLIER R,S-R18,kolkata wh, South ,20/03/2026,2026-03-20,2026-03-26,75,75,PcS,333.94, INR ,6,Delivered,RAIL,B017,22/12/2026,CUST-442,ship date missing
+PO-1343,RM-010,Chemical Mix,SUPPLIER J,S-J10,hyderabad wh,North,14-03-2026,2026-03-17,2026.03.23,50,48,LTR,220.4, INR ,6,DELIVERED,rail,B138,2028.04.27,CUST-443,duplicate candidate
+PO-1344, RM-003 ,Packaging Foam,supplier K,S-K11,PUNE WH,east,10 Feb 2026,2026.02.15,2026-02-15,60,NULL,kg,16.54,inr,0,Partially Delivered,ROAD,B178,2026/09/28,CUST-444,Delayed by weather
+PO-1345,FG-920,sensor kit,Supplier N,S-N14,kolkata wh,WEST,22-02-2026,22/02/26,2026/02/27,800,N/A,PCS,2401.0,inr,5,delieverd,Sea,NULL,24/09/2026,CUST-445,
+PO-1346,FG-500,Pump Unit,supplier P,S-P16, Hyderabad WH ,west,2026-01-18,2026/01/20,2026-01-29,-50,48,pcs,8900.0,INR,9,Partially delivered, Sea ,B137,32/02/2026,CUST-446,On time
+PO-1347,RM-011,lubricant oil,Supplier N,S-N14, Pune WH ,WEST,10/03/26,2026-03-10,17 Mar 2026,500,480,LT,130.0,inr,7,delivered,Rail,B084,30/05/27,CUST-447,
+PO-1348,RM-009,copper wire, Supplier P ,S-P16,Delhi Warehouse,north,25/01/2026,2026/01/29, ,600,590,kg,745.71,inr,8,Pending,Rail,B100,14/04/2027,CUST-448,
+PO-1349, SFG-17 ,SEMI FINISHED VALVE,supplier N,S-N14,Bangalore Wh, South ,2026.03.10,12/03/26,32/02/2026,1500,1495,pcs,340.75,inr,1,In transit,air,B165,11/05/28,CUST-449,extra spaces
+PO-1350,sfg-17,Semi Finished Valve, Supplier F ,S-F06,Hyderabad WH,South,2026-01-27,2026-01-31, ,200,195,pcs,,EUR,10,In-Transit,TRUCK,B101,16-01-2027,CUST-450,supplier missing
+PO-1351,RM-010,Chemical Mix, Supplier L ,S-L12,Kolkata WH, North ,06-02-2026,2026-13-07,2026/02/09,300,300,LTR,NULL,INR,3,delivered,Air,B081,20-06-2027,CUST-451,supplier missing
+PO-1352,sfg-88,actuator block,SUPPLIER J,S-J10,Vizag WH, North ,2026.01.12,2026-13-07,2026.01.20,300,300,PcS,999.6, INR ,3,In Transit,Rail,B158,03/08/2026,CUST-452,extra spaces
+PO-1353,RM-001,STEEL COIL,Supplier H,S-H08,Delhi Warehouse, North ,2026/01/12,13/01/2026,19/01/2026,500,498,KG,51.45,inr,6,Partially delivered,TRUCK,B195,23/02/2028,CUST-453,partial shipment
+PO-1354, FG-333 ,Motor Assembly,Supplier-B,S_B02, Plant 2 ,east,2026/02/16,18-02-2026,2026/02/20,60,40,nos,5600.0,inr,2,Delivered,RAIL,B037,26/12/26,CUST-454,currency mismatch?
+PO-1355,RM-003,Packaging Foam,Supplier E,S-E05,kolkata wh, North ,32/02/2026,2026-02-23,2026.02.28,25,N/A,kg,15.75, INR ,5,Delivered,Rail,B046,14 Dec 2027,CUST-455,Delayed by weather
+PO-1356,fg-333,Motor Assembly,Supplier N,NA,Lucknow Wh, South ,22/02/2026,NA,26/02/26,210,210,NOS,5600.0,EUR,2,delivered,Road,B052,2027-07-09,CUST-456,Delayed by weather
+PO-1357,SFG-17,Semi Finished Valve,Supplier J,S-J10,JAIPUR WH, South ,2026.03.12,2026.03.14,NA,400,,PcS,340.75,INR,2,Delivered,Sea,B086,2026-11-05,CUST-457,multiple null-like values
+PO-1358,rm-001,STEEL COIL,Supplier E,S-E05,Pune WH,East,26-02-2026,2026-03-03,09/03/2026,0,0,KGS,52.5, INR ,6,partial shipment,TRUCK,B175,05-03-2027,CUST-458,Delayed by weather
+PO-1359,RM-010,CHEMICAL MIX,Supplier E,S-E05, Ahmedabad WH ,North,15 Feb 2026,2026-02-20,2026-03-01,-500,490,ltr,220.4, INR ,9,delivered,sea,B198,2026-09-09,CUST-459,supplier missing
+PO-1360,RM-001,STEEL COIL,Supplier A,N/A, Kolkata WH , West ,12/03/26,12/03/2026,2026-03-13,NULL,590,KG,51.45,INR,1,in transit, Air ,B170,32/02/2026,CUST-460,
+PO-1361, RM-011 ,lubricant oil,Supplier J,S-J10,Pune WH,NORTH,09-01-2026,2026.01.09,09-01-2026,40,30, l ,130.0,inr,0,, Rail ,b065,10/11/2025,CUST-461,Delayed by weather
+PO-1362,fg-777,Control Panel,SUPPLIER F,S-F06,Mumbai WH,EAST,01-03-2026,04-03-2026,2026.03.04,75,75,pcs,15000.0,inr,0,in transit,Air,B111,17/08/28,CUST-462,Delayed by weather
+PO-1363,rm-010,CHEMICAL MIX, Supplier C ,S-C03,jaipur wh,West,20 Mar 2026,2026/03/19,28 Mar 2026,1500,NULL,Ltr,220.4, INR ,8,Partially Delivered,air,B185,25 Jan 2028,CUST-463,ship date before order date
+PO-1364, RM-005 ,rubber seal,NULL,S-H08,Vizag Wh,south,17-01-2026,2026.01.22,29/01/2026,1500,1500,KG,75.20, INR ,7,delivered,Rail,B024,28/09/27,CUST-464,On time
+PO-1365, RM-001 ,Steel Coil,supplier I,S-I09,Chennai WH, East ,2026-01-09,13/01/26,2026-01-19,600,600,kg,51.45,INR,6,DELIVERED,Road,B143, ,CUST-465,same day delivery
+PO-1366,FG-120,Gasket Kit,supplier e,S-E05, Kolkata WH ,north,12 Jan 2026,2026-01-14,16-01-2026,210,210,PcS,225.00,eur,2,In transit,air,B026,09/06/2028,CUST-466,extra spaces
+PO-1367,RM-011,LUBRICANT OIL,Supplier C,S-C03, Mumbai_WH ,EAST,27/03/26,31 Mar 2026,07/04/26,NULL,600, l ,NULL,inr,7,In transit,Road,B085,11/01/28,CUST-467,manual entry
+PO-1368,SFG-33,Casing Unit,Supplier  F, ,PLANT 2,west,18/03/2026,2026/03/19,24/03/2026,500,,pcs,780.0,inr,5,partial shipment,Air,B062,2027/10/01,CUST-468,supplier missing
+PO-1369,FG-920,Sensor Kit,SUPPLIER O,S-O15, Mumbai_WH , East ,2026.02.10,11-02-2026,2026-02-14,500,NULL,PCS,2499.0,inr,3,delieverd, Truck ,B029,NA,CUST-469,partial shipment
+PO-1370,RM-005,rubber seal, Supplier P ,S-P16, Vizag WH ,SOUTH,17/01/2026,17 Jan 2026, ,100,100,Kg,75.2, INR ,4,Delivered,Air,B196,31/08/2027,CUST-470,duplicate candidate
+PO-1371, FG-333 ,Motor Assembly,SUPPLIER H,null, Plant 1 , South ,2026-03-08,12/03/26,2026-03-21,abc,100,nos,5600.0, INR ,9,delieverd,TRUCK,B130,2027-09-10,CUST-471,multiple null-like values
+PO-1372,SFG-17,semi finished valve,SUPPLIER R,S-R18,Vizag WH,east,2026/02/21,24/02/26,2026/02/27,abc,398,pcs,357.79, INR ,3,Partially delivered,rail,B005,05 Jun 2028,CUST-472,non numeric qty ordered
+PO-1373,SFG-33,CASING UNIT,SUPPLIER H,NA,VIZAG WH,East,16 Jan 2026,21-01-2026,2026-01-29,-400,400,PCS,780.00, INR ,8,DELIVERED, Road ,B059,2028.03.03,CUST-473,multiple null-like values
+PO-1374, RM-005 ,Rubber Seal,SUPPLIER A,S-A01,hyderabad wh, South ,25-02-2026,26/02/26,08-03-2026,25,NA,kg,75.2, INR ,10,Partially delivered,Air,B193,18/11/2027,CUST-474,supplier missing
+PO-1375,SFG-21,Valve Body,Supplier  G,S-G07,Mumbai_Wh, North ,2026/03/22,2026-03-25,30-03-2026,-300,300,PcS,477.75, INR ,5,delivered, Truck ,B041,27/01/27,CUST-475,currency mismatch?
+PO-1376,SFG-17,SEMI FINISHED VALVE, Supplier K ,NA,Bangalore Wh, North ,22/02/2026,2026.02.23,28/02/2026,400,NULL,PCS,340.75, INR ,5,In-Transit,Road,B021,2026/12/17,CUST-476,supplier missing
+PO-1377,SFG-33,CASING UNIT, ,S-I09,Vizag WH,east,2026-01-29,31/01/2026,04/02/2026,50,30,PcS,795.6,inr,4,In transit,sea,B149,,CUST-477,supplier missing
+PO-1378,RM-002,plastic resin,Supplier P,S-P16,Pune WH,EAST,08/03/26,10-03-2026,2026/03/13,300,290,KG,89.99,inr,3,DELIVERED,Sea,B146,32/02/2026,CUST-478,same day delivery
+PO-1379,fg-920, Sensor Kit ,Supplier  J,S-J10,Chennai WH,East,2026-13-07,2026.04.02,08 Apr 2026,600,600,PCS,"2,450.00", USD ,6,Partially Delivered,road,B041,2028-08-21,CUST-479,On time
+PO-1380,fg-500,pump unit,SUPPLIER O,S-O15,hyderabad wh,North,01/03/2026,2026-03-03,06/03/2026,abc,40,PcS,8900.0,INR,3,DELIVERED, Road ,B101,14-08-2027,CUST-480,currency mismatch?
+PO-1381,sfg-33,CASING UNIT,Supplier H,S-H08,Plant 1,north,23 Jan 2026,2026/01/25, ,500,500,pcs,819.0,INR,10,, Air ,B061,2026/09/01,CUST-481,manual entry
+PO-1382,RM-009,COPPER WIRE,SUPPLIER I,S-I09, Bangalore WH ,west,16-02-2026,21/02/26,2026-03-01,200,195,Kg,745.71,inr,8,Delivered,Air,B040,18 Jul 2027,CUST-482,supplier missing
+PO-1383, FG-500 ,pump unit,SUPPLIER J,S-J10,Plant 1,NORTH,23-03-2026,22/03/2026,2026/04/01,75,75,PcS,8900.0, INR ,NULL,Delivered,road,B027,23/03/27,CUST-483,ship date before order date
+PO-1384, SFG-33 ,casing unit,Supplier A,S-A01,HYDERABAD WH,west,03-01-2026,04/01/2026,2026-01-04,500,495,pcs,NULL, INR ,0,delieverd,ROAD,B066,2028/04/01,CUST-484,partial shipment
+PO-1385,FG-221,FINISHED GEAR,Supplier G,S-G07,Bangalore Wh,SOUTH,17/03/2026,2026.03.19,2026-13-07,600,600,pcs,1260.0, INR ,5,Cncld,sea,B171,2027/03/23,CUST-485,same day delivery
+PO-1386,SFG-88,actuator block,SUPPLIER R,S-R18,Delhi Warehouse, West ,2026/03/11,14-03-2026,22/03/26,1500,1519,PCS,980.0,INR,8,DELIVERED,sea,B193,01/02/27,CUST-486,duplicate candidate
+PO-1387,RM-003,Packaging Foam, Supplier-B ,S_B02,Hyderabad Wh,South,32/02/2026,2026-03-22,30 Mar 2026,abc,null,kg,15.75,INR,8,in transit,road,B151, ,CUST-487,supplier missing
+PO-1388,rm-011,lubricant oil,supplier R,S-R18,plant 1,north,15-02-2026,2026/02/19,2026.02.21,800,780,LT,130.0,INR,2,delieverd,AIR,B118,09/11/2027,CUST-488,ship date missing
+PO-1389,rm-005,Rubber Seal,Supplier  D,S-D04,Nagpur WH,south,14-02-2026,2026.02.15,2026.02.22,50,45,kg,73.7, USD ,7,Delivered,Truck,B109,26-05-2028,CUST-489,supplier missing
+PO-1390,RM-009,Copper Wire,supplier L,S-L12,LUCKNOW WH,North,2026.01.18,2026.01.20,,120,120,KG,710.2, INR ,7,In-Transit,TRUCK,b196,24/10/27,CUST-490,partial shipment
+PO-1391,fg-777,Control Panel,supplier K,S-K11,Chennai Wh,West,2026-13-07,20/03/26,28/03/26,0,0,PCS,15000.0,INR,8,In-Transit,TRUCK,B084,2027.03.18,CUST-491,On time
+PO-1392,FG-920,sensor kit,Supplier  L,S-L12,Kolkata Wh,South,02-01-2026,03 Jan 2026,10-01-2026,500,,PcS,2401.0,inr,7,DELIVERED,Air,,2027/07/10,CUST-492,Delayed by weather
+PO-1393,SFG-33,CASING UNIT,Supplier  N,S-N14,Jaipur WH,WEST,17-02-2026,2026/02/18,2026.02.22,40,38,PCS,795.6, INR ,4,Partially Delivered,Sea,B109,2027/02/19,CUST-493,partial shipment
+PO-1394,rm-002,PLASTIC RESIN,Supplier A,S-A01,plant 1,south,2026/02/20,21/02/2026,03-03-2026,100,100,Kg,89.99,EUR,10,delieverd,Road,B041,2027.11.08,CUST-494,extra spaces
+PO-1395,sfg-88,actuator block,Supplier G,S-G07,Pune WH,south,08/02/26,11/02/2026,2026.02.19,300,,PcS,980.0,INR,8,partial shipment,Air,b067,2027-06-10,CUST-495,supplier missing
+PO-1396,SFG-33,Casing Unit,SUPPLIER F,S-F06, Mumbai_WH ,west,30-03-2026,32/02/2026,07-04-2026,abc,380,PCS,795.6,inr,6,Delivered,SEA,B109,2028.09.05,CUST-496,non numeric qty ordered
+PO-1397,RM-011,LUBRICANT OIL,SUPPLIER K,S-K11,Delhi Warehouse,NORTH,11/01/2026,15/01/26,2026-01-24,800,790, l ,127.4, INR ,-1,Partially delivered,sea,B159,08/06/28,CUST-497,negative lead time
+PO-1398,FG-777,control panel,SUPPLIER J,S-J10,Hyderabad WH,EAST,2026/01/13,2026-01-15,18/01/26,800,798,PcS,"15,000.00",inr,3,Pending,AIR,B136,13-12-2027,CUST-498,same day delivery
+PO-1399, SFG-33 ,CASING UNIT, Supplier Q ,S-Q17,Jaipur WH,North,2026/03/01,06/03/26,2026/03/06,400,400,pcs,780.0,INR,0,Pending,TRUCK,B064,29-02-2028,CUST-499,supplier missing
+PO-1400, RM-011 ,Lubricant  Oil,Supplier G,S-G07,Pune WH,South,21/03/2026,2026-03-21,21/03/2026,400,abc, l ,130.0, INR ,0,partial shipment,Air,B023,2028-07-14,CUST-500,same day delivery
+PO-1401,FG-221,finished gear,null,S-C03,bangalore wh, North ,21/03/26,26 Mar 2026,2026-04-02,400,390,PcS,1200.0, INR ,7,DELIVERED,Truck,B010,10/04/27,CUST-501,extra spaces
+PO-1402,RM-001,Steel Coil,supplier f,S-F06, Delhi Warehouse ,EAST,20/03/26,24/03/2026,2026-03-31,210,190,KG,52.5, INR ,7,Partially Delivered,road,B032,2028-01-04,CUST-502,ship date missing
+PO-1403, RM-004 ,Aluminium Sheet,Supplier  L,S-L12,Chennai WH, West ,03/01/26,04/01/2026,12/01/26,75,NULL,kg,310.5,inr,8,Cancelled,truck,B157,2026-08-15,CUST-503,currency mismatch?
+PO-1404,SFG-17, Semi Finished Valve ,supplier n,S-N14,chennai wh,South,23/01/2026,25 Jan 2026,26/01/2026,1500,NA,PCS,357.79,inr,1,delieverd,Truck,B028,2028.01.22,CUST-504,On time
+PO-1405,RM-002,Plastic Resin,supplier D,S-D04,ahmedabad wh,South,2026-13-07,20 Jan 2026,29/01/26,25,25,KG,89.99,INR,9,Delivered,Truck,B053,01/02/2028,CUST-505,supplier missing
+PO-1406,rm-005,Rubber Seal,SUPPLIER F,S-F06,Pune WH,SOUTH,12/01/2026,2026-01-17,2026/01/23,25, ,kg,75.2, EUR ,6,NA,Sea,B190,2027-10-21,CUST-506,multiple null-like values
+PO-1407,RM-003,packaging foam,supplier f,S-F06,Plant 2,West,2026.03.11,14-03-2026,32/02/2026,800,800,Kg,15.75,INR,4,Delivered,truck,B129,2028/03/05,CUST-507,multiple null-like values
+PO-1408,rm-002,Plastic Resin,Supplier Q,S-Q17, Delhi Warehouse ,north,29 Jan 2026,02/02/2026,2026-02-10,800,800,kg,89.99,INR,8,delieverd,Air,B004,11 Aug 2027,CUST-508,On time
+PO-1409,FG-333,motor assembly,supplier r,S-R18,plant 2, West ,2026-03-21,2026-03-21,2026/03/27,25,20,nos,5712.0,INR,6,partial shipment,air,B011,2025-05-25,CUST-509,supplier missing
+PO-1410,RM-001,Steel Coil,SUPPLIER O,S-O15,Pune WH,west,2026.03.15,2026-03-19,28/03/2026,,210,Kg,51.45,INR,-1,Delivered,RAIL,B036,24/06/2027,CUST-510,negative lead time
+PO-1411,rm-004,aluminium sheet,Supplier R,S-R18,Delhi Warehouse,east,14-01-2026,18 Jan 2026,19/01/2026,800,800,KGS,NULL,INR,1,In-Transit,TRUCK,B009,2026-13-07,CUST-511,partial shipment
+PO-1412,sfg-17,SEMI FINISHED VALVE,SUPPLIER J,S-J10,KOLKATA WH, North ,09-02-2026,2026/02/14,16/02/2026,75,73,PCS,340.75,inr,2,delivered, Truck ,B094,08/01/2028,CUST-512,duplicate candidate
+PO-1413,FG-333,motor assembly,Supplier  N,S-N14,VIZAG WH,West,07-03-2026,2026.03.09,2026-03-18,300,298,nos,5880.0,INR,9,delieverd,TRUCK,B131,N/A,CUST-513,multiple null-like values
+PO-1414,RM-004,Aluminium Sheet,supplier D,S-D04,Nagpur WH,WEST,26/01/26,2026-13-07,2026/02/07,50,45,Kg,310.5,INR,8,DELIVERED, Rail ,NULL,null,CUST-514,extra spaces
+PO-1415,FG-120,Gasket Kit,SUPPLIER-B,S_B02,Bangalore Wh, South ,2026-13-07,21/01/26,24/01/26,abc,55,pcs,225.0, INR ,3,Delivered,Air,B077,21-11-2027,CUST-515,non numeric qty ordered
+PO-1416,RM-004,Aluminium Sheet,supplier c,S-C03, Chennai WH ,west,13/02/2026,2026.02.14,19-02-2026,100,90,Kg,316.71,inr,5,delieverd,Rail,B195,2026-13-07,CUST-516,multiple null-like values
+PO-1417, SFG-88 ,Actuator Block,SUPPLIER L,N/A,Ahmedabad WH,NORTH,32/02/2026,2026.01.03,2026/01/13,210,200,pcs,NULL,usd,10,Partially Delivered, Road ,B150,2026-08-19,CUST-517,currency mismatch?
+PO-1418,fg-777,Control Panel,supplier i,S-I09,Plant 2,SOUTH,06 Feb 2026,2026/02/07,08/02/2026,200,195,pcs,15000.0,INR,1,Delivered,Road,B154,2026/10/22,CUST-518,currency mismatch?
+PO-1419,FG-221,FINISHED GEAR,Supplier D,S-D04,Pune Wh, West ,01 Feb 2026,05/02/26,10/02/26,400,390,pcs,"1,176.00",usd,5,pending,Air,B152,,CUST-519,multiple null-like values
+PO-1420,FG-500,pump unit,supplier R,S-R18, Nagpur WH ,south,03/03/2026,2026-03-08,08/03/2026,abc,120,pcs,8900.0,USD,0,cancelled,rail,B084,18-12-2027,CUST-520,same day delivery
+PO-1421,fg-777,Control Panel,Supplier N,S-N14, Plant 1 , West ,19/03/26,null,25-03-2026,25,5,PCS,15300.0,inr,6,DELIVERED,sea,B061, ,CUST-521,duplicate candidate
+PO-1422, RM-009 ,copper wire,Supplier  P,S-P16,Chennai Wh,WEST,2026/01/17,2026.01.20,2026-01-23,100,abc,Kg,710.2,INR,3,delieverd, Sea ,B167,2027-12-05,CUST-522,Delayed by weather
+PO-1423,SFG-17,semi finished valve,SUPPLIER P,S-P16,VIZAG WH, North ,08/01/26,11/01/2026,19-01-2026,25,abc,pcs,340.75, INR ,8,delivered,ROAD,B011,03 Jul 2027,CUST-523,On time
+PO-1424, RM-011 ,lubricant oil,SUPPLIER H,S-H08,DELHI WAREHOUSE,WEST,2026.03.31,01 Apr 2026,2026-13-07,100,95, l ,130.00,usd,7,delieverd,TRUCK,B033,2026-13-07,CUST-524,currency mismatch?
+PO-1425,rm-009,Copper Wire,Supplier - B,S_B02,DELHI WAREHOUSE,SOUTH,2026-01-10,12/01/2026,16/01/26,-200,195,kg,724.4, INR ,4,partial shipment,AIR,B064,11/02/27,CUST-525,partial shipment
+PO-1426,rm-009,Copper Wire,SUPPLIER N,S-N14,Delhi Warehouse, North ,2026.03.10,2026-03-10,15/03/26,200,200,KGS,710.2,INR,5,In-Transit,sea,B193,null,CUST-526,supplier missing
+PO-1427,FG-221,finished gear, Supplier I ,S-I09,Ahmedabad WH,East,20/01/2026,2026/01/25,02/02/26,600, 600 ,pcs,1224.0, INR ,8,delivered, Truck ,B002,07-03-2028,CUST-527,duplicate candidate
+PO-1428,rm-005,rubber seal,supplier E,S-E05,MUMBAI_WH,South,02-02-2026,07-02-2026,2026/02/17,400,390,kg,75.2,usd,10,Delivered,ROAD,B127,26-05-2028,CUST-528,currency mismatch?
+PO-1429, RM-005 ,RUBBER SEAL,supplier F,S-F06,PUNE WH,east,2026-01-28,02/02/2026,2026/02/07,500,abc,KG,abc,usd,5,Delivered, Rail ,B047,2026-13-07,CUST-529,currency mismatch?
+PO-1430,rm-002, Plastic Resin , Supplier L ,S-L12,Kolkata WH,South,24-01-2026,2026-01-24,2026/01/31,-300,290,kg,94.49,inr,7,in transit, Sea ,B196,2027/02/20,CUST-530,ship date before order date
+PO-1431,sfg-17,Semi Finished Valve,Supplier  N,S-N14,MUMBAI_WH,West,24/02/2026,01 Mar 2026,03-03-2026,200,190,PCS,340.75,inr,2,Partially delivered,sea,B073,NA,CUST-531,
+PO-1432,RM-004,ALUMINIUM SHEET,supplier Q,S-Q17, Jaipur WH ,West,03/01/26,03 Jan 2026,10/01/2026,120,120,KGS,316.71,inr,7,DELIVERED,TRUCK,B197,2026-13-07,CUST-532,
+PO-1433, FG-500 ,PUMP UNIT,Supplier  I,S-I09, Delhi Warehouse ,North,20-02-2026,25/02/26,01-03-2026,200,200,pcs,9078.0,INR,4,Delivered,Sea,B173,2027.11.08,CUST-533,multiple null-like values
+PO-1434,RM-002,Plastic Resin, Supplier E ,S-E05, Ahmedabad WH ,west,31-03-2026,01/04/2026,N/A,60,60,Kg,94.49, INR ,9,In Transit, Sea ,B061,2027/10/14,CUST-534,same day delivery
+PO-1435,FG-777,CONTROL PANEL,SUPPLIER N,S-N14,Pune WH, South ,32/02/2026,08/03/26,32/02/2026,40,38,PCS,15750.0,INR,10,In-Transit, Road ,B007,2027-08-02,CUST-535,duplicate candidate
+PO-1436, FG-777 ,control panel, Supplier C ,S-C03,Nagpur WH,south,2026/03/04,04 Mar 2026,NA,75,73,pcs,14700.0, INR ,8,Pending,Rail,B109,2027/07/20,CUST-536,partial shipment
+PO-1437,rm-011,LUBRICANT OIL,Supplier R,S-R18,Jaipur WH,EAST,2026.03.26,27/03/26,2026-03-27,75,, l ,136.5,INR,0,Delivered,ROAD,B163,2027.10.13,CUST-537,
+PO-1438,FG-333,motor assembly,SUPPLIER F,S-F06,Kolkata WH,South,2026-03-09,2026-03-10,19-03-2026,800,795,Nos,"5,712.00",INR,9,Partially delivered,Truck,B118,32/02/2026,CUST-538,duplicate candidate
+PO-1439,sfg-17,Semi Finished Valve,SUPPLIER I,S-I09, Hyderabad WH ,SOUTH,11/02/2026,15-02-2026,21 Feb 2026,,90,PCS,340.75,inr,6,DELIVERED,AIR,B077,2027-02-02,CUST-539,currency mismatch?
+PO-1440, RM-003 ,packaging foam, Supplier R ,S-R18, Vizag WH , West ,2026.02.17,19-02-2026,32/02/2026,25,25,KG,15.75, INR ,10,,road,B064,2028.02.09,CUST-540,manual entry
+PO-1441, RM-001 ,Steel Coil,Supplier M,S-M13, Kolkata WH ,West,10/01/2026,2026.01.13,2026.01.22,800,800,KG,53.55, EUR ,9,pending,air,B083,NULL,CUST-541,same day delivery
+PO-1442,fg-120,gasket kit,supplier E,S-E05,Vizag WH,north,2026-02-09,14 Feb 2026,24/02/2026,-200,180,pcs,225.0, INR ,10,delieverd,Sea,B039,03-06-2028,CUST-542,multiple null-like values
+PO-1443,FG-920,Sensor Kit,Supplier-B,S_B02,Nagpur WH,east,2026-02-21,2026.02.25,2026-02-27,,25,pcs,2401.0,inr,,delieverd,Rail,B086,2027-12-30,CUST-543,duplicate candidate
+PO-1444,rm-003,PACKAGING FOAM,Supplier G,S-G07, Jaipur WH , West ,25/01/26,32/02/2026,2026-13-07,40,40,KGS,15.75,INR,7,Delivered,sea,B127,32/02/2026,CUST-544,same day delivery
+PO-1445,RM-003,Packaging Foam,NA,null,Plant 2,EAST,2026/03/07,2026-03-07,12/03/26,500,NULL,KGS,15.44, INR ,5,,sea,B064,2026-13-07,CUST-545,same day delivery
+PO-1446,sfg-17,semi finished valve,SUPPLIER A,S-A01,Nagpur WH,West,10/03/26,2026-13-07,14-03-2026,75,null,PCS,, INR ,0,pending,Air,B185,10/05/27,CUST-546,same day delivery
+PO-1447, RM-003 ,packaging foam,Supplier G,S-G07, Nagpur WH ,South,2026/02/19,22-02-2026,2026-02-23,60,60,KGS,15.75,INR,1,Delivered,TRUCK,B153,,CUST-547,
+PO-1448, FG-500 ,pump unit,Supplier M,S-M13,Kolkata WH, South ,22-02-2026,2026-02-23,2026.02.26,0,0,pcs,"8,900.00", INR ,3,DELIVERED,Truck,B034,11/09/2027,CUST-548,extra spaces
+PO-1449,RM-005,RUBBER SEAL,SUPPLIER A,S-A01,Lucknow WH,EAST,2026/02/13,14/02/2026,NA,1000,980,KG,75.2, INR ,3,cancelled,TRUCK,B013,2028/05/15,CUST-549,same day delivery
+PO-1450,SFG-21,VALVE BODY,SUPPLIER K,S-K11, Kolkata WH ,West,2026/01/21,32/02/2026,2026-13-07,500,abc,PcS,445.9, INR ,9,delieverd, Truck ,B108,2026/12/19,CUST-550,same day delivery
+PO-1451,SFG-21,Valve Body,supplier C,S-C03,Chennai WH,SOUTH,17-03-2026,19-03-2026,23/03/2026,1000,995,PcS,477.75,inr,4,DELIVERED,Road,B150,13/11/2026,CUST-551,multiple null-like values
+PO-1452,RM-003,packaging foam,SUPPLIER R,S-R18,hyderabad wh, South ,01-01-2026,06 Jan 2026,07-01-2026,-100,100,KG,15.75,inr,-1,delieverd,Air,B175,2026-13-07,CUST-552,negative lead time
+PO-1453,RM-010,CHEMICAL MIX,SUPPLIER H,S-H08,Plant 2,South,08/03/2026,2026-13-07,14/03/2026,75,75,LTR,224.81,INR,4,In-Transit, Sea ,B083,2026-12-05,CUST-553,
+PO-1454, FG-120 ,GASKET KIT,SUPPLIER M,S-M13,HYDERABAD WH,West,04/01/26,2026/01/07,07-01-2026,120,abc,PCS,229.5,INR,0,In transit,air,B162,2027/04/26,CUST-554,On time
+PO-1455,SFG-17,Semi  Finished  Valve,Supplier N,S-N14,Plant 1,NORTH,06/02/26,10-02-2026,17/02/2026,210,210,PcS,340.75,EUR,7,,Rail,B139,27 May 2027,CUST-555,supplier missing
+PO-1456,fg-920,Sensor Kit,SUPPLIER K,S-K11,Chennai Wh,east,03/01/2026,2026.01.03,32/02/2026,100,90,pcs,"2,450.00", EUR ,1,Partially delivered,SEA,B128,06 May 2027,CUST-556,duplicate candidate
+PO-1457,FG-120,gasket kit,supplier A,S-A01,Plant 2,East,2026/03/07,10 Mar 2026,2026/03/20,1000,995,PcS,229.5,usd,10,delieverd,AIR,B052,25-10-2027,CUST-557,currency mismatch?
+PO-1458,fg-777,Control Panel,null,S-N14, Plant 2 ,South,07-02-2026,null,2026-13-07,500,500,pcs,15000.0,usd,0,delieverd,SEA,B002,05/01/2027,CUST-558,ship date missing
+PO-1459,RM-010,CHEMICAL MIX,Supplier I,S-I09,NAGPUR WH, North ,16-03-2026,2026-03-19,29 Mar 2026,50,30,LTR,215.99, INR ,10,delivered,Rail,B069,2026-13-07,CUST-559,same day delivery
+PO-1460,RM-002,Plastic Resin,supplier h,S-H08, Mumbai_WH ,EAST,09 Mar 2026,2026-03-13,15/03/2026,0,0,KG,89.99,inr,2,delieverd, Road ,B121,30-06-2027,CUST-560,multiple null-like values
+PO-1461, SFG-17 ,semi finished valve,SUPPLIER F,S-F06,AHMEDABAD WH,WEST,03-03-2026,2026-03-05,13/03/2026,120,120,PCS,333.94, INR ,8,In Transit,Sea,B024,04 Mar 2028,CUST-561,Delayed by weather
+PO-1462,FG-221,Finished Gear, Supplier K ,S-K11,Vizag WH,EAST,2026/03/11,32/02/2026,2026.03.26,1000,1000,PCS,1224.0,inr,10,delieverd, Road ,B128,2027-08-09,CUST-562,supplier missing
+PO-1463,RM-004,Aluminium Sheet,SUPPLIER F,S-F06,mumbai_wh,north,2026.03.22,24 Mar 2026,25-03-2026,60,60,Kg,, INR ,1,delivered, Truck ,B167,31/08/25,CUST-563,same day delivery
+PO-1464,sfg-33,Casing Unit, Supplier L ,S-L12,Plant 1,WEST,2026/01/02,05/01/2026,32/02/2026,NULL,190,pcs,780.0,INR,7,Delivered,SEA,B113,02-06-2028,CUST-564,currency mismatch?
+PO-1465,FG-920,sensor kit,supplier C,S-C03, Plant 1 ,NORTH,2026-03-16,2026.03.21,28-03-2026,1000,995,pcs,2572.5,eur,7,delieverd,rail,B075,20-06-2027,CUST-565,multiple null-like values
+PO-1466,rm-010,Chemical Mix,N/A,S_B02,DELHI WAREHOUSE,NORTH,12/02/26,16/02/2026,21 Feb 2026,300,290,Ltr,220.4, INR ,5,partial shipment,TRUCK,B141,NULL,CUST-566,
+PO-1467,rm-004,ALUMINIUM SHEET, Supplier M ,S-M13,Lucknow WH,north,24/03/26,26 Mar 2026, ,200,180,Kg,326.03,eur,1,in transit, Road ,B116,20-01-2026,CUST-567,supplier missing
+PO-1468, FG-120 ,Gasket Kit,SUPPLIER H,S-H08,HYDERABAD WH,south,2026/01/05,2026/01/06,null,75,65,PcS,225.0,inr,2,Partially delivered,ROAD,B109,2028-01-25,CUST-568,same day delivery
+PO-1469,RM-003,PACKAGING FOAM, Supplier L ,S-L12,PLANT 1,WEST,2026/03/20,25/03/2026,30/03/2026,500,495,Kg,15.44,inr,5,Delivered,Sea,B156,22/06/2025,CUST-569,currency mismatch?
+PO-1470,FG-333,Motor Assembly,SUPPLIER Q,S-Q17,Jaipur WH,WEST,2026-03-17,2026/03/19,22-03-2026,50,51,Nos,5600.0, INR ,3,In-Transit,Truck,B132,04-04-2027,CUST-570,extra spaces
+PO-1471, FG-920 ,SENSOR KIT,Supplier A,S-A01,delhi warehouse,west,2026-03-16,2026-03-21,2026-03-24,200,180,PcS,"2,572.50",inr,3,Delivered,air,B050,14/11/2026,CUST-571,extra spaces
+PO-1472,rm-005,Rubber Seal,supplier f,S-F06,nagpur wh,south,2026/01/07,09 Jan 2026,2026/01/15,-75,65,kg,75.2,INR,6,DELIVERED,Air,B058,23 Feb 2028,CUST-572,ship date missing
+PO-1473, FG-333 ,Motor Assembly,Supplier P,S-P16,Nagpur WH,South,05-02-2026,10-02-2026,19/02/2026,500,500,nos,5600.0,inr,9,partial shipment, Sea ,B086,16/03/2028,CUST-573,
+PO-1474,FG-920,SENSOR KIT,Supplier K,S-K11, Plant 1 ,south,2026-01-20,22 Jan 2026,25-01-2026,600,598,PCS,2450.0, INR ,3,delieverd,AIR,B191,2028-04-24,CUST-574,ship date missing
+PO-1475, RM-003 ,packaging foam,supplier a,S-A01, Chennai WH ,north,2026/03/05,06/03/2026,13/03/2026,75,73,kg,15.75,inr,7,In-Transit,rail,B183,28/09/2026,CUST-575,partial shipment
+PO-1154,RM-010,Chemical Mix,Supplier  A,S-A01, Chennai WH ,West,15 Jan 2026,17/01/26,26-01-2026,1500,1500,LTR,224.81, INR ,9,delivered,TRUCK,B033,16-04-2027,CUST-254,ship date missing
+PO-1342,SFG-17,semi finished valve,SUPPLIER R,S-R18,kolkata wh, South ,20/03/2026,2026-03-20,2026-03-26,75,75,PcS,333.94, INR ,6,Delivered,RAIL,B017,22/12/2026,CUST-442,ship date missing
+PO-1318,RM-005,rubber seal,supplier G,S-G07,Plant 2,East,15/03/26,2026-03-17,2026/03/18,210,abc,KG,76.7,INR,1,DELIVERED,TRUCK,B008,32/02/2026,CUST-418,duplicate with spacing issue
+PO-1113,RM-003,PACKAGING FOAM,SUPPLIER R,S-R18,Plant 2,East,2026/03/20,2026/03/20,2026-03-25,25,23,KGS,15.44,INR,5,partial shipment,Sea,B043,27-10-2026,CUST-213,supplier missing
+PO-1015,RM-003,packaging foam,Supplier-B,S_B02,delhi warehouse,south,2026-03-14,16 Mar 2026,17/03/2026,200,200,KG,NULL,INR,1,partial shipment,Rail,B110,2027.07.22,CUST-115,duplicate with spacing issue
+PO-1387,RM-003,Packaging Foam,  Supplier-B  ,S_B02,Hyderabad Wh,South,32/02/2026,2026-03-22,30 Mar 2026,abc,null,kg,15.75,INR,8,in transit,road,B151, ,CUST-487,supplier missing
+PO-1337,fg-500,Pump Unit,NULL,S-A01, Chennai WH , North ,2026/03/13,2026-03-13,2026-03-18,120,110,pcs,"8,722.00", USD ,5,partial shipment,Air,B021,10/09/27,CUST-437,duplicate with spacing issue
+PO-1423,SFG-17,semi finished valve,SUPPLIER P,S-P16,VIZAG WH, North ,08/01/26,11/01/2026,19-01-2026,25,abc,pcs,340.75, INR ,8,delivered,ROAD,B011,03 Jul 2027,CUST-523,On time
+PO-1443,FG-920,Sensor Kit,Supplier-B,S_B02,Nagpur WH,east,2026-02-21,2026.02.25,2026-02-27,,25,pcs,2401.0,inr,,delieverd,Rail,B086,2027-12-30,CUST-543,duplicate with spacing issue
+PO-1206,fg-221,FINISHED GEAR,Supplier  D,N/A,delhi warehouse, West ,30-03-2026,01-04-2026,2026/04/09,500,498,PCS, 1200.0 ,inr,8,partial shipment,TRUCK,B194,2027.02.26,CUST-306,
+PO-1396,SFG-33,Casing Unit,SUPPLIER F,S-F06, Mumbai_WH ,west,30-03-2026,32/02/2026,07-04-2026,abc,380,PCS,795.6,inr,6,Delivered,SEA,B109,2028.09.05,CUST-496,non numeric qty ordered
+PO-1020,sfg-21,VALVE BODY, Supplier G ,S-G07,Kolkata WH,west,14 Jan 2026,15-01-2026,NA,0,0,PcS,445.9,INR,6,In Transit,RAIL,B191,2027/12/10,CUST-120,
+PO-1207, FG-500 ,Pump Unit,SUPPLIER E,S-E05,chennai wh,SOUTH,08 Feb 2026,2026-02-13,17/02/2026,25,5,pcs,8900.0,INR,4,Delivered,AIR,B053,2026/11/30,CUST-307,duplicate with spacing issue
+PO-1318,RM-005,rubber seal,supplier G,S-G07,PLANT 2,East,15/03/26,2026-03-17,2026/03/18,210,abc,KG,76.7,INR,1,DELIVERED,TRUCK,B008,32/02/2026,CUST-418,ship date missing
+PO-1133,fg-221,Finished Gear, Supplier I ,S-I09,Bangalore WH,WEST,17-03-2026,2026-03-17,2026.03.22,600,,pcs,1260.0,INR,5,DELIVERED,AIR,B158,2027/07/21,CUST-233,same day delivery
+PO-1031,fg-777,Control Panel, SUPPLIER Q ,S-Q17,jaipur wh,North,19-02-2026,null,null,600,603,PcS,15750.0,inr,0,NA,air,B012,2026-13-07,CUST-131,duplicate candidate
+PO-1249, RM-001 ,Steel Coil,Supplier  J,S-J10,Ahmedabad WH,WEST,02-02-2026,2026.02.03,08/02/2026,500,495,KG,52.5, INR ,5,delivered, Air ,B169,2026-10-30,CUST-349,manual entry
+PO-1041,sfg-88, Actuator Block , Supplier N ,S-N14, Plant 1 ,West,10-03-2026,2026.03.15,2026.03.18,200,190,PCS,999.6, INR ,3,Delivered,Truck,,2028-02-13,CUST-141,extra spaces
+PO-1060,RM-004,aluminium sheet,SUPPLIER E,S-E05,Mumbai WH,SOUTH,27/02/2026,N/A,2026.03.07,800,800,KGS,304.29,INR,5,delivered, Sea ,B181,2028.08.16,CUST-160,ship date missing
+PO-1434,RM-002,Plastic Resin, Supplier E ,S-E05, Ahmedabad WH ,west,31-03-2026,01/04/2026,N/A,60,60,Kg,94.49, INR ,9,In Transit, Sea ,B061,2027/10/14,CUST-534,same day delivery
+PO-1083,FG-777,CONTROL PANEL,Supplier  E,S-E05,AHMEDABAD WH,south,23-01-2026,27/01/26,05/02/2026,75,65,PCS,15000.0, INR ,9,Delivered, Air ,B133, ,CUST-183,duplicate with spacing issue
+PO-1048, RM-003 ,PACKAGING FOAM,SUPPLIER F,S-F06,kolkata wh, West ,2026/03/13,32/02/2026,25 Mar 2026,-800,800,KGS,15.44,inr,8,Delivered,Rail,B063,28-04-2028,CUST-148,duplicate candidate
+PO-1039,RM-005,Rubber Seal,supplier d,S-D04,lucknow wh,South,01/02/2026,2026-02-01,11-02-2026,200,190,Kg,75.20,inr,10,delivered,Road,B168,10 Dec 2027,CUST-139,ship date missing
+PO-1262, RM-009 ,Copper Wire,supplier R,S-R18,Pune WH,South,2026.02.02,07-02-2026,2026-13-07,300,295,kg,696.0, INR ,6,partially delivered,RAIL,B128,05-03-2027,CUST-362,On time
+PO-1060,RM-004,aluminium sheet,SUPPLIER E,S-E05,Mumbai WH,SOUTH,27/02/2026,N/A,2026.03.07,800,800,KGS,304.29,INR,5,delivered, Sea ,B181,2028.08.16,CUST-160,duplicate with spacing issue
