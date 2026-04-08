@@ -8,10 +8,12 @@
 import io
 import os
 import sys
+import time
+import threading
 import traceback
 from datetime import datetime
 from pathlib import Path
-from collections import defaultdict
+from collections import defaultdict, deque
 
 import pandas as pd
 import streamlit as st
@@ -66,6 +68,34 @@ MAX_UPLOAD_BYTES = 12 * 1024 * 1024  # 12 MB
 # Magic bytes for Excel formats — used to validate uploads beyond just extension
 _XLSX_MAGIC = b'PK\x03\x04'       # xlsx is a ZIP archive
 _XLS_MAGIC  = b'\xD0\xCF\x11\xE0' # legacy xls (OLE2 compound doc)
+
+# ── Rate limiting ─────────────────────────────────────────────────────────
+# Global: max 20 clean operations per minute across ALL users (shared process)
+_GLOBAL_RATE_LOCK   = threading.Lock()
+_GLOBAL_REQUEST_LOG = deque()          # timestamps of recent global requests
+MAX_GLOBAL_RPM      = 20
+
+# Per-session: max 5 cleans, with a 60-second cooldown between each
+MAX_CLEANS_PER_SESSION = 5
+CLEAN_COOLDOWN_SECONDS = 60
+
+
+def _global_rate_limit_check() -> tuple[bool, int]:
+    """
+    Sliding-window global rate limiter.
+    Returns (allowed: bool, retry_after_seconds: int).
+    """
+    now = time.time()
+    with _GLOBAL_RATE_LOCK:
+        # Evict entries older than 60 seconds
+        while _GLOBAL_REQUEST_LOG and _GLOBAL_REQUEST_LOG[0] < now - 60:
+            _GLOBAL_REQUEST_LOG.popleft()
+        if len(_GLOBAL_REQUEST_LOG) >= MAX_GLOBAL_RPM:
+            oldest = _GLOBAL_REQUEST_LOG[0]
+            retry_after = int(60 - (now - oldest)) + 1
+            return False, retry_after
+        _GLOBAL_REQUEST_LOG.append(now)
+        return True, 0
 
 
 # ── CSS ───────────────────────────────────────────────────────────────────
@@ -889,7 +919,22 @@ def show_scan_page():
     col_clean, col_reset = st.columns([2, 1])
 
     with col_clean:
-        if st.button("⬡ Clean My Data", type="primary", use_container_width=True):
+        cleans_done     = st.session_state.get("cleans_done", 0)
+        last_clean_time = st.session_state.get("last_clean_time", 0.0)
+        cooldown_left   = max(0, CLEAN_COOLDOWN_SECONDS - int(time.time() - last_clean_time))
+
+        if cleans_done >= MAX_CLEANS_PER_SESSION:
+            st.error(f"Session limit reached ({MAX_CLEANS_PER_SESSION} cleans). Start a new session to continue.")
+        elif cooldown_left > 0:
+            st.warning(f"Please wait {cooldown_left}s before running another clean.")
+            st.button("⬡ Clean My Data", type="primary", use_container_width=True, disabled=True)
+        elif st.button("⬡ Clean My Data", type="primary", use_container_width=True):
+            # Global rate limit check
+            allowed, retry_after = _global_rate_limit_check()
+            if not allowed:
+                st.error(f"Too many requests right now. Please try again in {retry_after}s.")
+                return
+
             st.markdown("<div class='cf-rule'>Cleaning in Progress</div>", unsafe_allow_html=True)
             try:
                 clean_data = run_clean_with_progress(st.session_state.filepath)
@@ -897,8 +942,10 @@ def show_scan_page():
                 print(traceback.format_exc())
                 st.error("Something went wrong during cleaning. Please try again or upload a different file.")
                 return
-            st.session_state.clean_data = clean_data
-            st.session_state.stage      = "clean"
+            st.session_state.cleans_done    = cleans_done + 1
+            st.session_state.last_clean_time = time.time()
+            st.session_state.clean_data     = clean_data
+            st.session_state.stage          = "clean"
             st.rerun()
 
     with col_reset:

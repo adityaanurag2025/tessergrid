@@ -99,6 +99,14 @@ def call_claude_for_mappings(text_summary):
         "Return ONLY valid JSON with the mappings and fix entries as specified."
     )
 
+    # Cap input size — prevent token bombing from huge files
+    MAX_COLS   = 15
+    MAX_GROUPS = 25
+    text_summary = {
+        col: groups[:MAX_GROUPS]
+        for col, groups in list(text_summary.items())[:MAX_COLS]
+    }
+
     print("  Calling Claude API for text standardization decisions...")
     try:
         response = client.messages.create(
