@@ -9,10 +9,7 @@ python-dotenv==1.0.0
 anthropic>=0.40.0
 
 # Frontend
-streamlit==1.54.0
+streamlit>=1.37.0
 
 # Utilities
 xlrd==2.0.1
-
-# Pinned transitive dependency — CVE-2026-25990 fix
-pillow>=12.1.1
