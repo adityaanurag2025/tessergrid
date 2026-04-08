@@ -99,8 +99,8 @@ def apply_data_quality_flags(df):
             try:
                 if dd < sd:
                     add_issue(idx, "delivery_date before ship_date", delivery_date_col, dd)
-            except Exception:
-                pass
+            except TypeError:
+                pass  # unparseable date strings — skip comparison
 
         # expiry_date < delivery_date
         if (dd not in _EMPTY and dd.lower() not in _EMPTY
@@ -108,8 +108,8 @@ def apply_data_quality_flags(df):
             try:
                 if ed < dd:
                     add_issue(idx, "expiry_date before delivery_date", expiry_date_col, ed)
-            except Exception:
-                pass
+            except TypeError:
+                pass  # unparseable date strings — skip comparison
 
         # qty checks
         try:

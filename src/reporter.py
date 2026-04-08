@@ -105,8 +105,8 @@ def autofit_columns(ws, min_width=10, max_width=55):
         for cell in col_cells:
             try:
                 max_len = max(max_len, len(str(cell.value or "")))
-            except Exception:
-                pass
+            except (TypeError, AttributeError):
+                pass  # non-stringifiable cell value — skip width calculation
         ws.column_dimensions[col_letter].width = min(max(max_len + 4, min_width), max_width)
 
 
