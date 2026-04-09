@@ -17,7 +17,10 @@ from collections import defaultdict, deque
 
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
 # ── Path setup ────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,7 +42,9 @@ from cleaner import (
 )
 from reporter import generate_report
 
-load_dotenv(ROOT / ".env")
+# Only load .env locally — on Streamlit Cloud secrets are injected into the environment directly
+if load_dotenv and (ROOT / ".env").exists():
+    load_dotenv(ROOT / ".env")
 
 DATA_INPUT  = ROOT / "data" / "input"
 DATA_OUTPUT = ROOT / "data" / "output"
