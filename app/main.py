@@ -587,6 +587,11 @@ def show_sidebar():
         st.divider()
         st.caption("Version: v1.0.0")
         st.caption("Built by: Aditya")
+        st.divider()
+        st.warning(
+            "Beta Notice: ChainFix is an early-stage product. Please review cleaned files and fix reports "
+            "before using them in production or business-critical workflows."
+        )
 
         if not os.getenv("ANTHROPIC_API_KEY"):
             st.divider()
@@ -595,6 +600,73 @@ def show_sidebar():
                 "Text standardization will use rule-based fallback instead of Claude AI.",
                 icon="⚠️",
             )
+
+        st.divider()
+        with st.expander("Privacy Policy"):
+            st.markdown("""
+**ChainFix — Privacy Policy**
+
+**1. Information We Process**
+ChainFix processes files uploaded by users for the purpose of data cleaning, issue detection, and report generation.
+
+**2. Uploaded File Content**
+Uploaded files may include business data such as order records, SKU data, supplier information, warehouse details, and other tabular operational data.
+
+**3. Purpose of Processing**
+Uploaded files are processed only to detect data quality issues, clean supported issues automatically, generate a fix report, and return output files to the user.
+
+**4. Third-Party Processing**
+ChainFix uses the Anthropic Claude API to assist with cleaning operations. By using ChainFix, you acknowledge that uploaded data may be transmitted to Anthropic strictly for the purpose of providing cleaning and reporting functionality.
+
+**5. Data Retention**
+Uploaded files are processed in-session and are not retained by ChainFix after the session ends.
+
+**6. Model Training**
+Uploaded files are not used by ChainFix to train any AI model.
+
+**7. User Responsibility**
+Users are responsible for ensuring they have the right to upload and process the files they submit.
+
+**8. Security**
+ChainFix applies reasonable safeguards during file processing. Users should not upload confidential or regulated datasets without organizational approval.
+
+**9. Contact**
+For privacy-related questions, contact: [REPLACE_WITH_EMAIL]
+""")
+
+        with st.expander("Terms of Use"):
+            st.markdown("""
+**ChainFix — Terms of Use**
+
+**1. Service Description**
+ChainFix is an AI-powered data cleaning tool for Excel and CSV supply chain datasets.
+
+**2. Beta Product Notice**
+ChainFix is an early-stage product and may not detect or resolve every issue in every dataset.
+
+**3. User Review Required**
+Users must review cleaned outputs and reports before using them in operational, financial, or business-critical workflows.
+
+**4. No Warranty**
+The service is provided as-is, without guarantees of completeness, accuracy, or fitness for any specific business purpose.
+
+**5. Limitation of Liability**
+ChainFix and its creator are not responsible for downstream business decisions made using cleaned outputs.
+
+**6. Acceptable Use**
+Users must not upload unlawful content, malicious files, or data they are not authorized to process.
+
+**7. Ownership of Data**
+Users retain ownership of their uploaded files and output files.
+
+**8. Service Availability**
+The service may be modified, suspended, or discontinued at any time.
+
+**9. Contact**
+For support, contact: [REPLACE_WITH_EMAIL]
+""")
+
+        st.caption("Contact: [REPLACE_WITH_EMAIL]")
 
 
 # ── File helpers ──────────────────────────────────────────────────────────
@@ -779,6 +851,12 @@ def show_upload_page():
     )
 
     st.markdown("<br>", unsafe_allow_html=True)
+
+    st.info(
+        "Data Handling Notice: Uploaded files are processed only for cleaning and report generation. "
+        "Please avoid uploading highly sensitive or regulated data unless approved by your organization. "
+        "Review your company's data-sharing policy before use."
+    )
 
     # Upload box
     st.markdown("<div class='cf-upload-box'>", unsafe_allow_html=True)
@@ -971,7 +1049,7 @@ def show_clean_page():
         "<div class='cf-success-banner'>"
         "<span class='cf-success-icon'>✦</span>"
         "<div class='cf-success-title'>Data Cleaned Successfully</div>"
-        "<div class='cf-success-sub'>All detectable problems have been fixed automatically.</div>"
+        "<div class='cf-success-sub'>Cleaning completed. Supported issues were fixed automatically, and unresolved items were flagged for manual review.</div>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -1067,6 +1145,12 @@ def show_clean_page():
 
     # Downloads
     st.markdown("<div class='cf-rule'>Downloads</div>", unsafe_allow_html=True)
+
+    if clean.get("flags"):
+        st.warning(
+            "Manual Review Recommended: Some records were flagged instead of auto-corrected. "
+            "Please review the fix report before using the cleaned file in downstream workflows."
+        )
 
     col_a, col_b = st.columns(2)
     with col_a:
