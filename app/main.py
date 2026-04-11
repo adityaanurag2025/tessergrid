@@ -320,16 +320,13 @@ button[kind="primary"][data-cf-tertiary="true"],
 /* ── Caption / small text ────────────────────────────────── */
 .stCaption { color: var(--on-surface-var) !important; }
 
-/* ── Expander — fix icon/label overlap ───────────────────── */
-[data-testid="stExpander"] summary {
+/* ── Expander — style label without breaking Material Icons arrow ── */
+[data-testid="stExpander"] summary p {
     font-family: var(--font) !important;
     font-size: 0.80rem !important;
     font-weight: 600 !important;
     color: var(--on-surface) !important;
     letter-spacing: 0.02em !important;
-}
-[data-testid="stExpander"] summary svg {
-    flex-shrink: 0 !important;
 }
 
 /* ── Custom layout components ────────────────────────────── */
