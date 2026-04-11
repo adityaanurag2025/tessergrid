@@ -320,14 +320,6 @@ button[kind="primary"][data-cf-tertiary="true"],
 /* ── Caption / small text ────────────────────────────────── */
 .stCaption { color: var(--on-surface-var) !important; }
 
-/* ── Expander — style label without breaking Material Icons arrow ── */
-[data-testid="stExpander"] summary p {
-    font-family: var(--font) !important;
-    font-size: 0.80rem !important;
-    font-weight: 600 !important;
-    color: var(--on-surface) !important;
-    letter-spacing: 0.02em !important;
-}
 
 /* ── Custom layout components ────────────────────────────── */
 .cf-logo {
@@ -592,69 +584,39 @@ def show_sidebar():
             )
 
         st.divider()
-        with st.expander("Privacy Policy"):
-            st.markdown("""
-**ChainFix — Privacy Policy**
+        st.markdown("""
+<details style="margin-bottom:8px;">
+<summary style="font-family:Inter,sans-serif;font-size:0.80rem;font-weight:600;color:#191c1f;cursor:pointer;padding:10px 14px;background:#ffffff;border-radius:10px;list-style:revert;">Privacy Policy</summary>
+<div style="font-family:Inter,sans-serif;font-size:0.74rem;color:#44474f;line-height:1.7;padding:14px 14px 10px;background:#ffffff;border-radius:0 0 10px 10px;">
+<b>ChainFix — Privacy Policy</b><br><br>
+<b>1. Information We Process</b><br>ChainFix processes files uploaded by users for the purpose of data cleaning, issue detection, and report generation.<br><br>
+<b>2. Uploaded File Content</b><br>Uploaded files may include business data such as order records, SKU data, supplier information, warehouse details, and other tabular operational data.<br><br>
+<b>3. Purpose of Processing</b><br>Uploaded files are processed only to detect data quality issues, clean supported issues automatically, generate a fix report, and return output files to the user.<br><br>
+<b>4. Third-Party Processing</b><br>ChainFix uses the Anthropic Claude API to assist with cleaning operations. By using ChainFix, you acknowledge that uploaded data may be transmitted to Anthropic strictly for the purpose of providing cleaning and reporting functionality.<br><br>
+<b>5. Data Retention</b><br>Uploaded files are processed in-session and are not retained by ChainFix after the session ends.<br><br>
+<b>6. Model Training</b><br>Uploaded files are not used by ChainFix to train any AI model.<br><br>
+<b>7. User Responsibility</b><br>Users are responsible for ensuring they have the right to upload and process the files they submit.<br><br>
+<b>8. Security</b><br>ChainFix applies reasonable safeguards during file processing. Users should not upload confidential or regulated datasets without organizational approval.<br><br>
+<b>9. Contact</b><br>For privacy-related questions, contact: <a href="mailto:adityaanurag2024@gmail.com" style="color:#191c1f;">adityaanurag2024@gmail.com</a>
+</div>
+</details>
 
-**1. Information We Process**
-ChainFix processes files uploaded by users for the purpose of data cleaning, issue detection, and report generation.
-
-**2. Uploaded File Content**
-Uploaded files may include business data such as order records, SKU data, supplier information, warehouse details, and other tabular operational data.
-
-**3. Purpose of Processing**
-Uploaded files are processed only to detect data quality issues, clean supported issues automatically, generate a fix report, and return output files to the user.
-
-**4. Third-Party Processing**
-ChainFix uses the Anthropic Claude API to assist with cleaning operations. By using ChainFix, you acknowledge that uploaded data may be transmitted to Anthropic strictly for the purpose of providing cleaning and reporting functionality.
-
-**5. Data Retention**
-Uploaded files are processed in-session and are not retained by ChainFix after the session ends.
-
-**6. Model Training**
-Uploaded files are not used by ChainFix to train any AI model.
-
-**7. User Responsibility**
-Users are responsible for ensuring they have the right to upload and process the files they submit.
-
-**8. Security**
-ChainFix applies reasonable safeguards during file processing. Users should not upload confidential or regulated datasets without organizational approval.
-
-**9. Contact**
-For privacy-related questions, contact: adityaanurag2024@gmail.com
-""")
-
-        with st.expander("Terms of Use"):
-            st.markdown("""
-**ChainFix — Terms of Use**
-
-**1. Service Description**
-ChainFix is an AI-powered data cleaning tool for Excel and CSV supply chain datasets.
-
-**2. Beta Product Notice**
-ChainFix is an early-stage product and may not detect or resolve every issue in every dataset.
-
-**3. User Review Required**
-Users must review cleaned outputs and reports before using them in operational, financial, or business-critical workflows.
-
-**4. No Warranty**
-The service is provided as-is, without guarantees of completeness, accuracy, or fitness for any specific business purpose.
-
-**5. Limitation of Liability**
-ChainFix and its creator are not responsible for downstream business decisions made using cleaned outputs.
-
-**6. Acceptable Use**
-Users must not upload unlawful content, malicious files, or data they are not authorized to process.
-
-**7. Ownership of Data**
-Users retain ownership of their uploaded files and output files.
-
-**8. Service Availability**
-The service may be modified, suspended, or discontinued at any time.
-
-**9. Contact**
-For support, contact: adityaanurag2024@gmail.com
-""")
+<details>
+<summary style="font-family:Inter,sans-serif;font-size:0.80rem;font-weight:600;color:#191c1f;cursor:pointer;padding:10px 14px;background:#ffffff;border-radius:10px;list-style:revert;">Terms of Use</summary>
+<div style="font-family:Inter,sans-serif;font-size:0.74rem;color:#44474f;line-height:1.7;padding:14px 14px 10px;background:#ffffff;border-radius:0 0 10px 10px;">
+<b>ChainFix — Terms of Use</b><br><br>
+<b>1. Service Description</b><br>ChainFix is an AI-powered data cleaning tool for Excel and CSV supply chain datasets.<br><br>
+<b>2. Beta Product Notice</b><br>ChainFix is an early-stage product and may not detect or resolve every issue in every dataset.<br><br>
+<b>3. User Review Required</b><br>Users must review cleaned outputs and reports before using them in operational, financial, or business-critical workflows.<br><br>
+<b>4. No Warranty</b><br>The service is provided as-is, without guarantees of completeness, accuracy, or fitness for any specific business purpose.<br><br>
+<b>5. Limitation of Liability</b><br>ChainFix and its creator are not responsible for downstream business decisions made using cleaned outputs.<br><br>
+<b>6. Acceptable Use</b><br>Users must not upload unlawful content, malicious files, or data they are not authorized to process.<br><br>
+<b>7. Ownership of Data</b><br>Users retain ownership of their uploaded files and output files.<br><br>
+<b>8. Service Availability</b><br>The service may be modified, suspended, or discontinued at any time.<br><br>
+<b>9. Contact</b><br>For support, contact: <a href="mailto:adityaanurag2024@gmail.com" style="color:#191c1f;">adityaanurag2024@gmail.com</a>
+</div>
+</details>
+""", unsafe_allow_html=True)
 
         st.markdown(
             "<div style='font-family:Inter,sans-serif;font-size:0.72rem;color:#44474f;margin-top:4px;'>"
