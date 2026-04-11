@@ -320,6 +320,18 @@ button[kind="primary"][data-cf-tertiary="true"],
 /* ── Caption / small text ────────────────────────────────── */
 .stCaption { color: var(--on-surface-var) !important; }
 
+/* ── Expander — fix icon/label overlap ───────────────────── */
+[data-testid="stExpander"] summary {
+    font-family: var(--font) !important;
+    font-size: 0.80rem !important;
+    font-weight: 600 !important;
+    color: var(--on-surface) !important;
+    letter-spacing: 0.02em !important;
+}
+[data-testid="stExpander"] summary svg {
+    flex-shrink: 0 !important;
+}
+
 /* ── Custom layout components ────────────────────────────── */
 .cf-logo {
     font-family: var(--font);
@@ -542,7 +554,7 @@ def show_sidebar():
             unsafe_allow_html=True,
         )
         st.divider()
-        st.markdown("<div style='font-family:var(--font-mono);font-size:0.68rem;color:var(--text-dim);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:10px;'>Supported Issues</div>", unsafe_allow_html=True)
+        st.markdown("<div style='font-family:Inter,sans-serif;font-size:0.68rem;color:#44474f;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;margin-bottom:10px;'>Supported Issues</div>", unsafe_allow_html=True)
 
         issues = [
             ("high",   "Duplicate column names"),
@@ -562,7 +574,12 @@ def show_sidebar():
         st.markdown(rows_html, unsafe_allow_html=True)
         st.divider()
         st.caption("Version: v1.0.0")
-        st.caption("Built by: Aditya")
+        st.markdown(
+            "<div style='font-family:Inter,sans-serif;font-size:0.72rem;color:#44474f;margin-top:2px;'>"
+            "Built by <strong style='color:#191c1f;'>Aditya Anurag</strong>"
+            "</div>",
+            unsafe_allow_html=True,
+        )
         st.divider()
         st.warning(
             "Beta Notice: ChainFix is an early-stage product. Please review cleaned files and fix reports "
@@ -607,7 +624,7 @@ Users are responsible for ensuring they have the right to upload and process the
 ChainFix applies reasonable safeguards during file processing. Users should not upload confidential or regulated datasets without organizational approval.
 
 **9. Contact**
-For privacy-related questions, contact: [REPLACE_WITH_EMAIL]
+For privacy-related questions, contact: adityaanurag2024@gmail.com
 """)
 
         with st.expander("Terms of Use"):
@@ -639,10 +656,16 @@ Users retain ownership of their uploaded files and output files.
 The service may be modified, suspended, or discontinued at any time.
 
 **9. Contact**
-For support, contact: [REPLACE_WITH_EMAIL]
+For support, contact: adityaanurag2024@gmail.com
 """)
 
-        st.caption("Contact: [REPLACE_WITH_EMAIL]")
+        st.markdown(
+            "<div style='font-family:Inter,sans-serif;font-size:0.72rem;color:#44474f;margin-top:4px;'>"
+            "Contact<br><a href='mailto:adityaanurag2024@gmail.com' style='color:#191c1f;font-weight:600;text-decoration:none;'>"
+            "adityaanurag2024@gmail.com</a>"
+            "</div>",
+            unsafe_allow_html=True,
+        )
 
 
 # ── File helpers ──────────────────────────────────────────────────────────
