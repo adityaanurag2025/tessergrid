@@ -39,6 +39,8 @@ from cleaner import (
     fix_enum_cols, fix_country_names, build_inconsistent_text_summary, call_claude_for_mappings,
     majority_vote_fallback, apply_text_mappings, recalculate_total_value,
     flag_missing_values, apply_data_quality_flags, save_clean_file,
+    apply_domain_enums, apply_domain_business_rules,
+    parse_instruction, apply_custom_rules,
 )
 from reporter import generate_report
 
@@ -69,6 +71,16 @@ REMOVED_FIX_TYPES = {"empty_rows", "erp_footer_rows", "duplicate_rows", "duplica
 XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 
 MAX_UPLOAD_BYTES = 12 * 1024 * 1024  # 12 MB
+
+DOMAINS = [
+    ("supply_chain", "Supply Chain"),
+    ("sales_crm",    "Sales & CRM"),
+    ("marketing",    "Marketing"),
+    ("finance",      "Finance & Accounting"),
+    ("hr",           "HR & People"),
+    ("contacts",     "Customer / Contacts"),
+    ("general",      "General (auto-detect)"),
+]
 
 # Magic bytes for Excel formats — used to validate uploads beyond just extension
 _XLSX_MAGIC = b'PK\x03\x04'       # xlsx is a ZIP archive
@@ -748,6 +760,33 @@ def run_clean_with_progress(filepath):
 
     df, log_text = apply_text_mappings(df, mappings, fixed_by=fixed_by)
 
+    # ── v2: Domain-specific enums + optional user instruction ─────────────
+    domain_key  = st.session_state.get("domain_key", "supply_chain")
+    instruction = st.session_state.get("instruction", "")
+
+    if domain_key != "supply_chain":
+        step(78, f"Applying {domain_key} domain rules…")
+        df, log_domain_enums = apply_domain_enums(df, domain_key)
+    else:
+        log_domain_enums = []
+
+    if instruction:
+        step(80, "Parsing your custom instruction…")
+        custom_rules = parse_instruction(instruction, list(df.columns), domain_key)
+        if custom_rules:
+            step(82, "Applying custom rules…")
+            df, log_custom = apply_custom_rules(df, custom_rules)
+        else:
+            log_custom = []
+    else:
+        log_custom = []
+
+    if domain_key != "supply_chain":
+        df, flags_domain = apply_domain_business_rules(df, domain_key)
+    else:
+        flags_domain = []
+    # ─────────────────────────────────────────────────────────────────────
+
     step(84, "Removing duplicate rows by business key…")
     df, log_dupes     = fix_duplicate_rows(df)
     df, log_biz_dupes = fix_duplicate_by_business_key(df)
@@ -757,7 +796,7 @@ def run_clean_with_progress(filepath):
 
     step(95, "Applying business rule validation…")
     df, quality_flags = apply_data_quality_flags(df)
-    flags = flag_missing_values(df) + quality_flags + enum_flags
+    flags = flag_missing_values(df) + quality_flags + enum_flags + flags_domain
 
     step(98, "Saving clean file…")
     original_filename = st.session_state.get("original_filename", "output")
@@ -774,6 +813,7 @@ def run_clean_with_progress(filepath):
     all_fixes = (
         log_nulls + log_dup_cols + log_empty + log_footer +
         log_ws + log_cust + log_nums + log_dates + log_enums + log_countries + log_text +
+        log_domain_enums + log_custom +
         log_dupes + log_biz_dupes + log_totals
     )
 
@@ -815,6 +855,26 @@ def show_upload_page():
         "Please avoid uploading highly sensitive or regulated data unless approved by your organization. "
         "Review your company's data-sharing policy before use."
     )
+
+    # Domain selector + optional instruction box (v2)
+    col_d, col_i = st.columns([1, 2])
+    with col_d:
+        domain_label = st.selectbox(
+            "Data domain",
+            [label for _, label in DOMAINS],
+            index=0,
+            help="Pick the type of data in your file. We'll apply domain-specific cleaning rules.",
+        )
+        domain_key = next(k for k, l in DOMAINS if l == domain_label)
+    with col_i:
+        instruction = st.text_area(
+            "Optional instruction (500 char max)",
+            placeholder='e.g. "Rename Amt to Amount" or "Drop the Notes column"',
+            max_chars=500,
+            height=80,
+        )
+    st.session_state["domain_key"]  = domain_key
+    st.session_state["instruction"] = instruction.strip() if instruction else ""
 
     # Upload box
     st.markdown("<div class='cf-upload-box'>", unsafe_allow_html=True)
