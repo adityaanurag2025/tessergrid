@@ -1,6 +1,6 @@
 # cleaner/nulls.py
 # Null placeholder normalization.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import pandas as pd
 

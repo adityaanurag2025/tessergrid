@@ -1,7 +1,7 @@
 # reporter.py
 # Generates a formatted three-sheet Excel report after cleaner.py runs.
 # Sheet 1: Summary dashboard  Sheet 2: Row-by-row fix log  Sheet 3: Flagged items.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 # Run from project root: python src/reporter.py
 
 import sys
@@ -405,7 +405,7 @@ def build_flagged_items_sheet(wb, flags):
 
 # Orchestrates report generation: creates the workbook, builds all three
 # sheets, removes the default empty sheet, and saves to output_path.
-def generate_report(report_data, output_path="data/output/chainfix_report.xlsx"):
+def generate_report(report_data, output_path="data/output/tessergrid_report.xlsx"):
     wb = openpyxl.Workbook()
     wb.remove(wb.active)  # remove default empty sheet
 

@@ -1,4 +1,4 @@
-# ChainFix Dependencies
+# Tessergrid Dependencies
 
 # Core
 pandas==2.2.0

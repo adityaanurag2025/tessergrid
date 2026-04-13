@@ -1,7 +1,7 @@
 # scanner.py
 # Scans an Excel/CSV file and detects all data quality problems.
 # Returns a structured list of problems with exact row/column locations.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 # Run from project root: python src/scanner.py
 
 import sys

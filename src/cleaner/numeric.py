@@ -1,6 +1,6 @@
 # cleaner/numeric.py
 # Numeric coercion and total value recalculation.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import re
 

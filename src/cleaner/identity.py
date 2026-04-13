@@ -1,6 +1,6 @@
 # cleaner/identity.py
 # Whitespace cleanup and customer ID normalization.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import re
 

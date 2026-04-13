@@ -1,6 +1,6 @@
 # cleaner/flags.py
 # Missing value flags and business rule validation.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import sys
 import os

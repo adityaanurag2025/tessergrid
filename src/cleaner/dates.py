@@ -1,6 +1,6 @@
 # cleaner/dates.py
 # Date format normalization.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import re
 import datetime

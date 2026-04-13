@@ -1,6 +1,6 @@
 # cleaner/text.py
 # Inconsistent text detection and Claude API-based standardization.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import os
 import json

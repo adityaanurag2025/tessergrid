@@ -1,7 +1,7 @@
 # cleaner/structural.py
 # Structural fixes: unmerge cells, drop duplicate/empty/footer/duplicate rows,
 # and business-key deduplication.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import os
 import re

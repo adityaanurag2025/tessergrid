@@ -1,6 +1,6 @@
 # cleaner/output.py
 # File saving, summary printing, and the main clean_file() pipeline entry point.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 
 import sys
 import os

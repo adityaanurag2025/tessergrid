@@ -1,14 +1,14 @@
-# ChainFix 🔧
+# Tessergrid
 
-> AI-powered supply chain data cleaning tool
+> AI-Powered Data Cleaner for Any Spreadsheet
 
-ChainFix takes messy Excel and CSV files from ERP systems like Blue Yonder, SAP, and Oracle — and automatically cleans them using AI. Built specifically for supply chain planners and operations teams.
+Tessergrid takes messy Excel and CSV files and automatically cleans them using AI. Upload any tabular data file — operations data, logistics records, inventory sheets, or any structured spreadsheet — and get back a clean file plus a detailed fix report.
 
 ---
 
 ## What It Does
 
-Upload a messy supply chain Excel file. ChainFix will:
+Upload a messy Excel or CSV file. Tessergrid will:
 
 1. **Scan** — detect all data quality problems automatically
 2. **Clean** — fix everything using Claude AI

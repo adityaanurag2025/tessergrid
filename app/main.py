@@ -1,8 +1,8 @@
 # main.py
-# Streamlit frontend for ChainFix.
+# Streamlit frontend for Tessergrid.
 # Users upload messy Excel/CSV files, see scan results,
 # and download clean files and fix reports from here.
-# Part of ChainFix - Supply Chain Data Cleaning Tool
+# Part of Tessergrid - AI Data Cleaner
 # Run from project root: streamlit run app/main.py
 
 import io
@@ -537,9 +537,9 @@ button[kind="primary"][data-cf-tertiary="true"],
 def show_sidebar():
     with st.sidebar:
         st.markdown(
-            "<span class='cf-sidebar-brand'>⬡ CHAINFIX</span>"
-            "<span class='cf-sidebar-desc'>AI-powered cleaner for messy supply chain data. "
-            "Built for planners and operations teams dealing with dirty ERP exports.</span>",
+            "<span class='cf-sidebar-brand'>⬡ TESSERGRID</span>"
+            "<span class='cf-sidebar-desc'>AI-powered cleaner for messy spreadsheets. "
+            "Pick your data domain and we'll apply the right rules.</span>",
             unsafe_allow_html=True,
         )
         st.divider()
@@ -571,7 +571,7 @@ def show_sidebar():
         )
         st.divider()
         st.warning(
-            "Beta Notice: ChainFix is an early-stage product. Please review cleaned files and fix reports "
+            "Beta Notice: Tessergrid is an early-stage product. Please review cleaned files and fix reports "
             "before using them in production or business-critical workflows."
         )
 
@@ -588,15 +588,15 @@ def show_sidebar():
 <details style="margin-bottom:8px;">
 <summary style="font-family:Inter,sans-serif;font-size:0.80rem;font-weight:600;color:#191c1f;cursor:pointer;padding:10px 14px;background:#ffffff;border-radius:10px;list-style:revert;">Privacy Policy</summary>
 <div style="font-family:Inter,sans-serif;font-size:0.74rem;color:#44474f;line-height:1.7;padding:14px 14px 10px;background:#ffffff;border-radius:0 0 10px 10px;">
-<b>ChainFix — Privacy Policy</b><br><br>
-<b>1. Information We Process</b><br>ChainFix processes files uploaded by users for the purpose of data cleaning, issue detection, and report generation.<br><br>
+<b>Tessergrid — Privacy Policy</b><br><br>
+<b>1. Information We Process</b><br>Tessergrid processes files uploaded by users for the purpose of data cleaning, issue detection, and report generation.<br><br>
 <b>2. Uploaded File Content</b><br>Uploaded files may include business data such as order records, SKU data, supplier information, warehouse details, and other tabular operational data.<br><br>
 <b>3. Purpose of Processing</b><br>Uploaded files are processed only to detect data quality issues, clean supported issues automatically, generate a fix report, and return output files to the user.<br><br>
-<b>4. Third-Party Processing</b><br>ChainFix uses the Anthropic Claude API to assist with cleaning operations. By using ChainFix, you acknowledge that uploaded data may be transmitted to Anthropic strictly for the purpose of providing cleaning and reporting functionality.<br><br>
-<b>5. Data Retention</b><br>Uploaded files are processed in-session and are not retained by ChainFix after the session ends.<br><br>
-<b>6. Model Training</b><br>Uploaded files are not used by ChainFix to train any AI model.<br><br>
+<b>4. Third-Party Processing</b><br>Tessergrid uses the Anthropic Claude API to assist with cleaning operations. By using Tessergrid, you acknowledge that uploaded data may be transmitted to Anthropic strictly for the purpose of providing cleaning and reporting functionality.<br><br>
+<b>5. Data Retention</b><br>Uploaded files are processed in-session and are not retained by Tessergrid after the session ends.<br><br>
+<b>6. Model Training</b><br>Uploaded files are not used by Tessergrid to train any AI model.<br><br>
 <b>7. User Responsibility</b><br>Users are responsible for ensuring they have the right to upload and process the files they submit.<br><br>
-<b>8. Security</b><br>ChainFix applies reasonable safeguards during file processing. Users should not upload confidential or regulated datasets without organizational approval.<br><br>
+<b>8. Security</b><br>Tessergrid applies reasonable safeguards during file processing. Users should not upload confidential or regulated datasets without organizational approval.<br><br>
 <b>9. Contact</b><br>For privacy-related questions, contact: <a href="mailto:adityaanurag2024@gmail.com" style="color:#191c1f;">adityaanurag2024@gmail.com</a>
 </div>
 </details>
@@ -604,12 +604,12 @@ def show_sidebar():
 <details>
 <summary style="font-family:Inter,sans-serif;font-size:0.80rem;font-weight:600;color:#191c1f;cursor:pointer;padding:10px 14px;background:#ffffff;border-radius:10px;list-style:revert;">Terms of Use</summary>
 <div style="font-family:Inter,sans-serif;font-size:0.74rem;color:#44474f;line-height:1.7;padding:14px 14px 10px;background:#ffffff;border-radius:0 0 10px 10px;">
-<b>ChainFix — Terms of Use</b><br><br>
-<b>1. Service Description</b><br>ChainFix is an AI-powered data cleaning tool for Excel and CSV supply chain datasets.<br><br>
-<b>2. Beta Product Notice</b><br>ChainFix is an early-stage product and may not detect or resolve every issue in every dataset.<br><br>
+<b>Tessergrid — Terms of Use</b><br><br>
+<b>1. Service Description</b><br>Tessergrid is an AI-powered data cleaning tool for Excel and CSV supply chain datasets.<br><br>
+<b>2. Beta Product Notice</b><br>Tessergrid is an early-stage product and may not detect or resolve every issue in every dataset.<br><br>
 <b>3. User Review Required</b><br>Users must review cleaned outputs and reports before using them in operational, financial, or business-critical workflows.<br><br>
 <b>4. No Warranty</b><br>The service is provided as-is, without guarantees of completeness, accuracy, or fitness for any specific business purpose.<br><br>
-<b>5. Limitation of Liability</b><br>ChainFix and its creator are not responsible for downstream business decisions made using cleaned outputs.<br><br>
+<b>5. Limitation of Liability</b><br>Tessergrid and its creator are not responsible for downstream business decisions made using cleaned outputs.<br><br>
 <b>6. Acceptable Use</b><br>Users must not upload unlawful content, malicious files, or data they are not authorized to process.<br><br>
 <b>7. Ownership of Data</b><br>Users retain ownership of their uploaded files and output files.<br><br>
 <b>8. Service Availability</b><br>The service may be modified, suspended, or discontinued at any time.<br><br>
@@ -764,7 +764,7 @@ def run_clean_with_progress(filepath):
     stem = Path(original_filename).stem
     ts   = datetime.now().strftime("%Y%m%d_%H%M%S")
     clean_filename  = f"clean_{stem}_{ts}.xlsx"
-    report_filename = f"chainfix_report_{stem}_{ts}.xlsx"
+    report_filename = f"tessergrid_report_{stem}_{ts}.xlsx"
     output_path     = str(DATA_OUTPUT / clean_filename)
     report_path_str = str(DATA_OUTPUT / report_filename)
     st.session_state["clean_path"]  = output_path
@@ -803,8 +803,8 @@ def show_upload_page():
 
     # Logo
     st.markdown(
-        "<div class='cf-logo'>Chain<em>Fix</em></div>"
-        "<div class='cf-tagline'>AI-Powered Supply Chain Data Cleaner</div>",
+        "<div class='cf-logo'>Tesser<em>grid</em></div>"
+        "<div class='cf-tagline'>AI-Powered Data Cleaner for Any Spreadsheet</div>",
         unsafe_allow_html=True,
     )
 
@@ -952,7 +952,7 @@ def show_scan_page():
         )
 
         st.info(
-            "ChainFix will automatically fix all High and Medium severity issues. "
+            "Tessergrid will automatically fix all High and Medium severity issues. "
             "Low severity items will be flagged for your review."
         )
 
@@ -1072,7 +1072,7 @@ def show_clean_page():
     df_summary = pd.DataFrame(summary_rows)
 
     clean_path  = Path(st.session_state.get("clean_path",  str(DATA_OUTPUT / "clean_supply_chain_data.xlsx")))
-    report_path = Path(st.session_state.get("report_path", str(DATA_OUTPUT / "chainfix_report.xlsx")))
+    report_path = Path(st.session_state.get("report_path", str(DATA_OUTPUT / "tessergrid_report.xlsx")))
 
     # Data preview
     st.markdown("<div class='cf-rule'>Data Preview — first 10 rows</div>", unsafe_allow_html=True)
@@ -1129,7 +1129,7 @@ def show_clean_page():
             st.download_button(
                 label="↓ Download Fix Report",
                 data=report_path.read_bytes(),
-                file_name="chainfix_report.xlsx",
+                file_name="tessergrid_report.xlsx",
                 mime=XLSX_MIME,
                 use_container_width=True,
             )
@@ -1147,7 +1147,7 @@ def show_clean_page():
 
 def main():
     st.set_page_config(
-        page_title="ChainFix",
+        page_title="Tessergrid",
         page_icon="⬡",
         layout="centered",
         initial_sidebar_state="expanded",

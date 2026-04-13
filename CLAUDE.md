@@ -1,6 +1,6 @@
-# ChainFix
+# Tessergrid
 
-AI-powered supply chain data cleaning tool. Users upload messy Excel/CSV files — the tool scans for problems, uses the Claude API to fix them, and outputs a clean file plus a summary report.
+AI-powered data cleaning tool for messy Excel/CSV files across multiple domains. Users upload a file — the tool scans for problems, uses the Claude API to fix them, and outputs a clean file plus a summary report.
 
 ## Tech Stack
 - Python + Pandas
@@ -10,7 +10,7 @@ AI-powered supply chain data cleaning tool. Users upload messy Excel/CSV files �
 
 ## Folder Structure
 ```
-chainfix/
+tessergrid/
 ├── CLAUDE.md              # This file
 ├── .claude/               # Claude Code configuration and context files
 │   ├── settings.json
