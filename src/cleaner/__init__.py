@@ -35,6 +35,8 @@ from .text       import (
 from .identity   import fix_whitespace, fix_customer_id
 from .flags      import flag_missing_values, apply_data_quality_flags, add_quality_flags
 from .output     import save_clean_file, print_summary, clean_file
+from .domains            import DOMAIN_PROFILES, get_domain_profile, apply_domain_enums, apply_domain_business_rules
+from .instruction_parser import parse_instruction, apply_custom_rules
 
 __all__ = [
     "normalize_nulls",
@@ -70,4 +72,10 @@ __all__ = [
     "save_clean_file",
     "print_summary",
     "clean_file",
+    "DOMAIN_PROFILES",
+    "get_domain_profile",
+    "apply_domain_enums",
+    "apply_domain_business_rules",
+    "parse_instruction",
+    "apply_custom_rules",
 ]
