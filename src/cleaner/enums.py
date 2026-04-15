@@ -82,6 +82,9 @@ UNIT_MAP = {
     "liters":    "L",
 }
 
+# FIXED: removed symbol→code mappings; symbols are flagged as unknown, not silently replaced
+# Currency symbols (₹, $, €, £) are NOT text variants of currency codes — replacing them
+# silently corrupts data by changing the stated currency without converting amounts.
 CURRENCY_MAP = {
     "usd":       "USD",
     "us dollar": "USD",
@@ -281,6 +284,37 @@ COUNTRY_CANONICAL = {
     "kr": "South Korea",
     "south korea": "South Korea",
 }
+
+
+# Normalizes product_sku and supplier_code columns to canonical format SKU-NNNN.
+# Handles: sku_NNNN, SKU_NNNN, sku-NNNN → SKU-NNNN
+# Never converts SKU-NNNN → sku_NNNN (that direction is a bug).
+# FIXED: SKU format inconsistency (bidirectional flipping)
+def fix_sku_format(df):
+    fix_log = []
+    target_cols = [c for c in df.columns if c.lower() in ("product_sku", "supplier_code")]
+    pattern = re.compile(r'^(?:sku[-_]?)(\d+)$', re.IGNORECASE)
+    for col in target_cols:
+        for idx, val in enumerate(df[col]):
+            val_str = str(val).strip()
+            if val_str == "" or val_str.lower() == "nan":
+                continue
+            m = pattern.match(val_str)
+            if m:
+                canonical = f"SKU-{m.group(1)}"
+                if canonical != val_str:
+                    excel_row = idx + 2
+                    fix_log.append({
+                        "fix_type": "inconsistent_text",
+                        "row": excel_row,
+                        "column": col,
+                        "original": val_str,
+                        "fixed": canonical,
+                        "action": f"Standardized '{val_str}' → '{canonical}'",
+                        "fixed_by": "Rule-Based",
+                    })
+                    df.at[idx, col] = canonical
+    return df, fix_log
 
 
 # Finds any column whose header contains "country" and applies COUNTRY_CANONICAL

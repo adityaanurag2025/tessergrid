@@ -26,6 +26,9 @@ Domain knowledge:
 - Merged cells should be unmerged and values copied to each cell
 - Numbers stored as text should be converted to numbers
 - Extra whitespace should be stripped from text fields
+- temperature_c: NEVER correct or transform numeric temperature values based on magnitude. Only flag if non-numeric (e.g. "hot", "cold"). Valid temperatures range from -89 to 200 degrees Celsius — values in this range must be left exactly as-is.
+- discount_pct and tax_pct: NEVER rescale values (do not multiply or divide by 10 or 100). Accept any numeric value between 0 and 100 as-is. Only flag if non-numeric.
+- product_sku and supplier_code: canonical format is SKU-NNNN (uppercase, hyphen). Normalize sku_NNNN, SKU_NNNN, sku-NNNN to SKU-NNNN. NEVER convert SKU-NNNN back to sku_NNNN.
 
 Return ONLY a JSON response in this exact format:
 {

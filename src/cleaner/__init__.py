@@ -23,6 +23,7 @@ from .enums      import (
     COUNTRY_CANONICAL,
     fix_enum_cols,
     fix_country_names,
+    fix_sku_format,
 )
 from .text       import (
     MODEL,
@@ -58,6 +59,7 @@ __all__ = [
     "COUNTRY_CANONICAL",
     "fix_enum_cols",
     "fix_country_names",
+    "fix_sku_format",
     "MODEL",
     "SYSTEM_PROMPT",
     "build_inconsistent_text_summary",

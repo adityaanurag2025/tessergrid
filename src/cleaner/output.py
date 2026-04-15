@@ -14,7 +14,7 @@ from .structural import (
 )
 from .numeric    import fix_numbers_as_text, recalculate_total_value
 from .dates      import fix_dates
-from .enums      import fix_enum_cols, fix_country_names
+from .enums      import fix_enum_cols, fix_country_names, fix_sku_format
 from .text       import (
     build_inconsistent_text_summary, call_claude_for_mappings,
     majority_vote_fallback, apply_text_mappings,
@@ -127,6 +127,12 @@ def clean_file(filepath, original_filename=None):
     df, log_cust = fix_customer_id(df)
     print(f"       {len(log_cust)} customer ID(s) normalized.")
 
+    # Step 5c: Standardize SKU format (sku_NNNN / SKU_NNNN → SKU-NNNN)
+    print("[5c]   Standardizing SKU format...")
+    df, log_sku = fix_sku_format(df)
+    # FIXED: SKU format standardization added to pipeline
+    print(f"       {len(log_sku)} SKU value(s) standardized.")
+
     # Step 6: Convert numbers stored as text
     print("[6/10] Converting numbers stored as text...")
     df, log_nums = fix_numbers_as_text(df)
@@ -189,7 +195,7 @@ def clean_file(filepath, original_filename=None):
     # Build combined fix log
     all_fixes = (
         log_nulls + log_dup_cols + log_empty + log_footer +
-        log_ws + log_cust + log_nums + log_dates + log_enums + log_countries + log_text +
+        log_ws + log_cust + log_sku + log_nums + log_dates + log_enums + log_countries + log_text +
         log_dupes + log_biz_dupes + log_totals
     )
 

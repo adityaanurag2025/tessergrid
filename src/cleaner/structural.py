@@ -168,7 +168,12 @@ def fix_duplicate_by_business_key(df):
     if not key_cols:
         return df, fix_log
 
-    dup_mask = df.duplicated(subset=key_cols, keep="first")
+    # FIXED: skip dedup for rows where all key fields are empty — they are not duplicates
+    has_any_key = df[key_cols].apply(
+        lambda row: any(str(v).strip() not in ("", "nan", "none") for v in row),
+        axis=1
+    )
+    dup_mask = df.duplicated(subset=key_cols, keep="first") & has_any_key
 
     order_col = find_col("order", "id")
     for idx in df[dup_mask].index:
