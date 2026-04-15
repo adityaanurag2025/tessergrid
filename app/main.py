@@ -574,7 +574,7 @@ def show_sidebar():
         )
         st.markdown(rows_html, unsafe_allow_html=True)
         st.divider()
-        st.caption("Version: v1.0.0")
+        st.caption("Version: v1.2.0")
         st.markdown(
             "<div style='font-family:Inter,sans-serif;font-size:0.72rem;color:#44474f;margin-top:2px;'>"
             "Built by <strong style='color:#191c1f;'>Aditya Anurag</strong>"
